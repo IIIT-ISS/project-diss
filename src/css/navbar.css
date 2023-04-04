@@ -1,0 +1,30 @@
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.navbar a {
+    float: left;
+    display: flex;
+    color: #eeeeee;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px 10%;
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 2px 5px 4px 5px;
+}
+
+.navbar-selected {
+    background-color: rgb(50, 50, 50);
+}
+
+.navbar a:hover {
+    background-color: rgb(80, 80, 80);
+}
