@@ -2,8 +2,8 @@
     overflow: hidden;
     background-image: url("../../images/banner_1.jpeg");
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: 70px;
+    width: 100vw;
     vertical-align: middle;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-bottom-right-radius: 10px;
