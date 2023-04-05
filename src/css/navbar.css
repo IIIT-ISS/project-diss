@@ -1,30 +1,32 @@
 .navbar {
     overflow: hidden;
-    background-color: black;
+    background-image: url("../../images/banner_1.jpeg");
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    padding-left: 15%;
-    padding-right: 15%;
+    vertical-align: middle;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .navbar a {
-    float: left;
-    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: inline-flex;
     color: #eeeeee;
     text-align: center;
     text-decoration: none;
-    padding: 20px 10%;
+    padding: 14px 5%;
     font-size: 20px;
     border-radius: 5px;
-    margin: 2px 5px 4px 5px;
+    margin: 2px 4px 4px 4px;
 }
 
 .navbar-selected {
-    background-color: rgb(50, 50, 50);
+    background-color: rgba(255, 255, 140, 0.3);
 }
 
 .navbar a:hover {
-    background-color: rgb(80, 80, 80);
+    background-color: rgba(150, 150, 150, 0.3);
 }
