@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Song List</title>
+  <style>
+    body {
+        overflow-X: hidden;
+    }
+    .song-list {
+      position: relative;
+      overflow-y: hidden; 
+      overflow-x: hidden; 
+      white-space: nowrap; /* Keep all the songs on one line */
+      padding-right: calc(100vw - 100%);
+      width: 100vw;
+      scrollbar-color: #ffffff;
+    }
+    .song {
+      display: inline-block; /* Display the songs side-by-side */
+      margin-right: 20px; /* Add some space between the songs */
+      background-color: rgb(241, 240, 237);
+      border-radius: 20%;
+      overflow-y: hidden; 
+      overflow-x: hidden; 
+      max-height: 1.2em;
+      animation: scroll 20s linear infinite;
+      padding: 70px;
+    }
+
+    /* Define the "scroll" animation */
+    @keyframes scroll {
+      0% {
+        transform: translateX(0); /* Start at 0% horizontal position */
+      }
+      100% {
+        transform: translateX(-1000px); /* End at -100% horizontal position */
+      }
+    }
+  </style>
+</head>
+<body>
+  <ul class="song-list" >
+    <li class="song">Song 1</li>
+    <li class="song">Song 2</li>
+    <li class="song">Song 3</li>
+    <li class="song">Song 4</li>
+    <li class="song">Song 5</li>
+    <li class="song">Song 6</li>
+    <li class="song">Song 7</li>
+    <li class="song">Song 8</li>
+    <li class="song">Song 9</li>
+    <li class="song">Song 1</li> <!-- Add an extra copy of the first song to create the circular effect -->
+    <li class="song">Song 2</li>
+    <li class="song">Song 3</li>
+    <li class="song">Song 4</li>
+    <li class="song">Song 5</li>
+  </ul>
+</body>
+</html>
