@@ -12,9 +12,10 @@ body {
 
 .meanius {
     position: fixed;
-    display: flex;
+    display: grid;
+    grid-template-columns: max(70px, 10%) 30% 8%;
     top: 0;
-    background-color: #FEF665;
+    background: linear-gradient(178deg, #FEF665 50%, #847247);
     width: 100%;
     padding-left: 10px;
     padding-top: 2px;
@@ -22,8 +23,6 @@ body {
     height: 65px;
 }
 
-.meanius-center {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.meanius-item {
+    grid-row: 1;
 }
