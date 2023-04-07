@@ -1,13 +1,11 @@
 body {
     margin: 0;
     position: relative;
-    padding-top: 40px;
-    padding-bottom: 200px;
+    padding-top: 120px;
     text-align: center;
     background-image: url("../../images/background.jpeg");
     min-height: 100vh;
     font-size: 20px;
-
 }
 
 .meanius {
