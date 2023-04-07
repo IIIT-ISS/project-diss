@@ -1,6 +1,6 @@
 About Us ( DISS )
 
-DISS, stands for duo for ISS, is a duo consisting of Ankit Pai (ankit.pai@research.iiit.ac.in) and Abhiram Tilak (abhiram.tilak@research.iiit.ac.in) 
+DISS, stands for duo for ISS, is a duo consisting of Ankith Pai (ankith.pai@research.iiit.ac.in) and Abhiram Tilak (abhiram.tilak@research.iiit.ac.in) 
 
 As we began working on our music review website, we drew inspiration from a number of other websites that we admired. We looked at how they presented their content, how they engaged with their readers, and how they built a sense of community around their platform.
 
