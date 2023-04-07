@@ -5,5 +5,65 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    min-height: 180px;
+    height: 320px;
+    display: grid;
+    grid-template-columns: 40% 2px 29% 2px 29%;
+    color: white;
+}
+
+.footer-col {
+    display: grid;
+    grid-template-rows: 60% 40%;
+}
+
+.footer-box {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.footer-box-big {
+    border-radius: 30px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-box-small {
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+
+.footer-col-3-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.footer-line {
+    background-color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 1px;
+    box-shadow: 2px 2px 1px rgba(50, 50, 50, 0.7);
+}
+
+.footer a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.footer a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
 }
