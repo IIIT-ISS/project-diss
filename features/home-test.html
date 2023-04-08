@@ -120,11 +120,11 @@
     .top {
       display: inline-block; /* Display the songs side-by-side */
       margin-right: 30px; /* Add some space between the songs */
-      background-color: rgba(243, 190, 174, 0.603);
+      background-color: rgba(255, 255, 255, 0.603);
       border-radius: 100%;
       box-shadow: 10px 5px 5px rgba(50, 50, 50, 0.4) ;
-      width: 305px;
-      height: 305px;
+      width: 300px;
+      height: 300px;
       text-align: center;
     }
 
@@ -176,7 +176,7 @@
     .album {
       display: inline-block; /* Display the songs side-by-side */
       margin-right: 30px; /* Add some space between the songs */
-      background-color: rgba(243, 190, 174, 0.603);
+      background-color: rgba(255, 255, 255, 0.603);
       border-radius: 3%;
       box-shadow: 10px 5px 5px rgba(50, 50, 50, 0.4) ;
       height: 300px;
@@ -229,10 +229,10 @@
     .songs {
       display: inline-block; /* Display the songs side-by-side */
       margin-right: 30px; /* Add some space between the songs */
-      background-color: rgba(243, 190, 174, 0.603);
+      background-color: rgba(255, 255, 255, 0.603);
       border-radius: 20%;
       box-shadow: 10px 5px 5px rgba(50, 50, 50, 0.4) ;
-      height: 255px;
+      height: 250px;
     }
 
     .songs img{
@@ -240,7 +240,6 @@
       border-radius: 20%;
       margin: 0;
       height: 250px;
-      width: 99%;
     }
 
     .songs-list {
@@ -280,7 +279,7 @@
       transform: translateX(-20px); /* Push the songs to the left when a song is hovered */
     }    
 
-     .artist {
+    .artist {
       display: inline-block; /* Display the songs side-by-side */
       margin-right: 20px; /* Add some space between the songs */
       background-color: rgba(195, 199, 246, 0.461);
@@ -357,14 +356,18 @@
                  -10px 0px 5px rgba(50, 50, 50, 0.3);
     }
 
+   /* fonts */
 
-
-   @font-face {
+    @font-face {
       font-family: "Quote Font";
       src: url("../fonts/Victor.ttf");
     }
     @font-face {
       font-family: "Image Font";
+      src: url("../fonts/PoiretOne-Regular.ttf");
+    }
+    @font-face {
+      font-family: "Heading Font";
       src: url("../fonts/PoiretOne-Regular.ttf");
     }
 
@@ -469,7 +472,7 @@
 
   <h1>artists</h1> 
   <ul class="top-list" >
-    <li class="top"><img src="../images/artist/rick_astley.png" alt="top1"></li>
+    <li class="top"><a href="https://youtube.com"><img src="../images/artist/rick_astley.png" alt="top1"></a></li>
     <li class="top"><img src="../images/artist/pepelisa.jpg" alt="top2"></li>
     <li class="top"><img src="../images/artist/beethoven.webp" alt="top3"></li>
   </ul>
@@ -483,10 +486,11 @@
 
   <h1>songs</h1> 
   <ul class="songs-list" >
-    <li class="songs"><img src="../images/Songs/Sneed's_feed_and_sneed.jpg" alt="top1"></li>
     <li class="songs"><img src="../images/Songs/Old_estate.jpg" alt="top2"></li>
     <li class="songs"><img src="../images/Songs/PPAP.jpg" alt="top3"></li>
+    <li class="songs" style="border: solid 1px;"><img src="../images/Songs/Sneed's_feed_and_sneed.jpg" alt="top1"></li>
   </ul>
+
     <br>
   <h1>Check Out other artists</h1>
   <ul class="artist-list" >
