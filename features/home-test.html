@@ -37,18 +37,6 @@
         transform: translateX(-400%); /* Start at 0% horizontal position */
       }
     }
-
-    .artist-list {
-      position: relative;
-      white-space: nowrap; /* Keep all the songs on one line */
-      padding-right: calc(100vw - 100%);
-      width: 100vw;
-      padding-bottom: 25px;
-      animation: scroll 15s ease-in-out infinite;
-      padding-top: 15px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(218, 216, 216, 0.4) 50%, rgba(255,255,255,0.2) 100%);
-    }
-
     .quote{
       margin: 0px;
       padding: 0px;
@@ -127,37 +115,45 @@
       right: -20px;
     }
 
-    .artist {
+    
+
+    .top {
       display: inline-block; /* Display the songs side-by-side */
-      margin-right: 20px; /* Add some space between the songs */
-      background-color: rgba(195, 199, 246, 0.461);
+      margin-right: 30px; /* Add some space between the songs */
+      background-color: rgba(243, 190, 174, 0.603);
       border-radius: 100%;
-      width: 200px;
-      height: 200px;
-      overflow-y: hidden; 
-      overflow-x: hidden; 
-      /* animation: scroll 15s ease-in-out infinite; */
-      padding: 70px;
       box-shadow: 10px 5px 5px rgba(50, 50, 50, 0.4) ;
+      width: 305px;
+      height: 305px;
+      text-align: center;
     }
 
-    .artist-list {
+    .top img{
+      padding: 0;
+      border-radius: 100%;
+      margin: 0;
+      width: 300px;
+      height: 300px
+    }
+
+    .top-list {
       position: relative;
-      white-space: nowrap; /* Keep all the songs on one line */
-      padding-right: calc(100vw - 100%);
-      width: 100vw;
-      padding-bottom: 25px;
-      animation: scroll 15s ease-in-out infinite;
-      padding-top: 15px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(218, 216, 216, 0.4) 50%, rgba(255,255,255,0.2) 100%);
+      margin-left: 50px;
+      margin-right: 90px;
+      padding-bottom: 30px;
+      padding-top: 30px;
+      padding-left: 30px;
+      padding-right: 5px;
+      background: linear-gradient(45deg, rgba(216,216,216,0.4) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(216,216,216,0.4) 100%);
+      border-radius: 10px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.8) rgba(216,216,216,0.2);
     }
 
-    .artist-list:hover{
-      animation-play-state: paused;
-    }
-
-    .artist:hover {
-      transform: scale(1.2); /* Increase the size of the song when hovered */
+    .top:hover {
+      transform: scale(1.1); /* Increase the size of the song when hovered */
       z-index: 1; /* Bring the hovered song to the front */
       box-shadow: 0px 10px 5px rgba(50, 50, 50, 0.4),
                   0px -10px 5px rgba(50, 50, 50, 0.3),
@@ -165,13 +161,32 @@
                  -10px 0px 5px rgba(50, 50, 50, 0.3);
     }
 
+    .top:hover ~ .album {
+      transform: translateX(20px); /* Push the songs to the right when a song is hovered */
+    }
+
+    .top:hover ~ .album:hover {
+      transform: translateX(0); /* Reset the position of the hovered song */
+    }    
+
+    .top:hover ~ .album:hover ~ .album {
+      transform: translateX(-20px); /* Push the songs to the left when a song is hovered */
+    }    
+
     .album {
       display: inline-block; /* Display the songs side-by-side */
       margin-right: 30px; /* Add some space between the songs */
       background-color: rgba(243, 190, 174, 0.603);
       border-radius: 3%;
-      padding: 120px;
       box-shadow: 10px 5px 5px rgba(50, 50, 50, 0.4) ;
+      height: 300px;
+    }
+
+    .album img{
+      padding: 0;
+      margin: 0;
+      border-radius: 3%;
+      height: 300px;
     }
 
     .album-list {
@@ -184,10 +199,14 @@
       padding-right: 5px;
       background: linear-gradient(45deg, rgba(216,216,216,0.4) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(216,216,216,0.4) 100%);
       border-radius: 10px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.8) rgba(216,216,216,0.2);
     }
 
     .album:hover {
-      transform: scale(1.3); /* Increase the size of the song when hovered */
+      transform: scale(1.1); /* Increase the size of the song when hovered */
       z-index: 1; /* Bring the hovered song to the front */
       box-shadow: 0px 10px 5px rgba(50, 50, 50, 0.4),
                   0px -10px 5px rgba(50, 50, 50, 0.3),
@@ -206,6 +225,90 @@
     .album:hover ~ .album:hover ~ .album {
       transform: translateX(-20px); /* Push the songs to the left when a song is hovered */
     }    
+
+    .songs {
+      display: inline-block; /* Display the songs side-by-side */
+      margin-right: 30px; /* Add some space between the songs */
+      background-color: rgba(243, 190, 174, 0.603);
+      border-radius: 20%;
+      box-shadow: 10px 5px 5px rgba(50, 50, 50, 0.4) ;
+      height: 255px;
+    }
+
+    .songs img{
+      padding: 0;
+      border-radius: 20%;
+      margin: 0;
+      height: 250px;
+      width: 99%;
+    }
+
+    .songs-list {
+      position: relative;
+      margin-left: 50px;
+      margin-right: 90px;
+      padding-bottom: 25px;
+      padding-top: 15px;
+      padding-left: 30px;
+      padding-right: 5px;
+      background: linear-gradient(45deg, rgba(216,216,216,0.4) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(216,216,216,0.4) 100%);
+      border-radius: 10px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.8) rgba(216,216,216,0.2);
+    }
+
+    .songs:hover {
+      transform: scale(1.1); /* Increase the size of the song when hovered */
+      z-index: 1; /* Bring the hovered song to the front */
+      box-shadow: 0px 10px 5px rgba(50, 50, 50, 0.4),
+                  0px -10px 5px rgba(50, 50, 50, 0.3),
+                  10px 0px 5px rgba(50, 50, 50, 0.3),
+                 -10px 0px 5px rgba(50, 50, 50, 0.3);
+    }
+
+    .songs:hover ~ .album {
+      transform: translateX(20px); /* Push the songs to the right when a song is hovered */
+    }
+
+    .songs:hover ~ .album:hover {
+      transform: translateX(0); /* Reset the position of the hovered song */
+    }    
+
+    .songs:hover ~ .album:hover ~ .album {
+      transform: translateX(-20px); /* Push the songs to the left when a song is hovered */
+    }    
+
+     .artist {
+      display: inline-block; /* Display the songs side-by-side */
+      margin-right: 20px; /* Add some space between the songs */
+      background-color: rgba(195, 199, 246, 0.461);
+      border-radius: 100%;
+      width: 200px;
+      height: 200px;
+      overflow-y: hidden; 
+      overflow-x: hidden; 
+      /* animation: scroll 15s ease-in-out infinite; */
+      padding: 70px;
+      box-shadow: 10px 5px 5px rgba(50, 50, 50, 0.4) ;
+    }
+
+    .artist img{
+      height: min-content;
+      width: min-content;
+    }
+
+    .artist-list {
+      position: relative;
+      white-space: nowrap; /* Keep all the songs on one line */
+      padding-right: calc(100vw - 100%);
+      width: 100vw;
+      padding-bottom: 25px;
+      animation: scroll 15s ease-in-out infinite;
+      padding-top: 15px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(218, 216, 216, 0.4) 50%, rgba(255,255,255,0.2) 100%);
+    }
 
     /* Define the "scroll" animation */
     @keyframes scroll {
@@ -241,7 +344,22 @@
       }
     }
 
-    @font-face {
+    .artist-list:hover{
+      animation-play-state: paused;
+    }
+
+    .artist:hover {
+      transform: scale(1.2); /* Increase the size of the song when hovered */
+      z-index: 1; /* Bring the hovered song to the front */
+      box-shadow: 0px 10px 5px rgba(50, 50, 50, 0.4),
+                  0px -10px 5px rgba(50, 50, 50, 0.3),
+                  10px 0px 5px rgba(50, 50, 50, 0.3),
+                 -10px 0px 5px rgba(50, 50, 50, 0.3);
+    }
+
+
+
+   @font-face {
       font-family: "Quote Font";
       src: url("../fonts/Victor.ttf");
     }
@@ -349,29 +467,46 @@
 
   </ul>
 
+  <h1>artists</h1> 
+  <ul class="top-list" >
+    <li class="top"><img src="../images/artist/rick_astley.png" alt="top1"></li>
+    <li class="top"><img src="../images/artist/pepelisa.jpg" alt="top2"></li>
+    <li class="top"><img src="../images/artist/beethoven.webp" alt="top3"></li>
+  </ul>
+
+  <h1>Album List</h1> 
+  <ul class="album-list" >
+    <li class="album"><img src="../images/album_covers/Kanye_west/Jesus_is_king.jpg" alt="top1"></li>
+    <li class="album"><img src="../images/album_covers/PepeLisa/trumpoline.png" alt="top3"></li>
+    <li class="album"><img src="../images/album_covers/PepeLisa/synthetica.webp" alt="top2"></li>
+  </ul>
+
+  <h1>songs</h1> 
+  <ul class="songs-list" >
+    <li class="songs"><img src="../images/Songs/Sneed's_feed_and_sneed.jpg" alt="top1"></li>
+    <li class="songs"><img src="../images/Songs/Old_estate.jpg" alt="top2"></li>
+    <li class="songs"><img src="../images/Songs/PPAP.jpg" alt="top3"></li>
+  </ul>
+    <br>
+  <h1>Check Out other artists</h1>
   <ul class="artist-list" >
     <!--  whenever anything is clicked on this artist list take them to artists page 
             not to the respective artist page but the whole artist page -->
-    <li class="artist">artist 1</li>
-    <li class="artist">artist 2</li>
-    <li class="artist">artist 3</li>
-    <li class="artist">artist 4</li>
-    <li class="artist">artist 5</li>
-    <li class="artist">artist 6</li>
-    <li class="artist">artist 7</li>
-    <li class="artist">artist 8</li>
-    <li class="artist">artist 9</li>
-    <li class="artist">artist 1</li> <!-- Add an extra copy of the first song to create the circular effect -->
-    <li class="artist">artist 2</li>
-    <li class="artist">artist 3</li>
-    <li class="artist">artist 4</li>
-    <li class="artist">artist 5</li>
+    <li class="songs"><img src="../images/artist/beethoven.webp" alt="artist1"></li>
+    <li class="songs"><img src="../images/artist/buger_child.jpg" alt="artist2"></li>
+    <li class="songs"><img src="../images/artist/dizzeerascal.webp" alt="artist3"></li>
+    <li class="songs"><img src="../images/artist/kanye_west.jpg" alt="artist4"></li>
+    <li class="songs"><img src="../images/artist/pepelisa.jpg" alt="artist5"></li>
+    <li class="songs"><img src="../images/artist/pete_and_bas.jpg" alt="artist6"></li>
+    <li class="songs"><img src="../images/artist/rick_astley.png" alt="artist7"></li>
+    <li class="songs"><img src="../images/artist/tyler_the_creator.jpg" alt="artist8"></li>
+    <li class="songs"><img src="../images/artist/wiley.png" alt="artist9"></li>
+    <li class="songs"><img src="../images/artist/beethoven.webp" alt="artist1"></li>
+    <li class="songs"><img src="../images/artist/buger_child.jpg" alt="artist2"></li>
+    <li class="songs"><img src="../images/artist/dizzeerascal.webp" alt="artist3"></li>
+    <li class="songs"><img src="../images/artist/kanye_west.jpg" alt="artist4"></li>
   </ul>
-  <br>
-  <ul class="album-list" >
-    <li class="album">Album 1</li>
-    <li class="album">Album 2</li>
-    <li class="album">Album 3</li>
-  </ul>
+
+
 </body>
 </html>
