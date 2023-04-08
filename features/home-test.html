@@ -12,8 +12,8 @@
       display: flex;
       position: relative;
       white-space: nowrap;
-      animation: why 10s steps(1, end) infinite;
-      animation-timing-function: cubic-bezier(0.17, 0.77, 0.3, 0.9);
+      animation: why 20s steps(1, end) infinite;
+      animation-timing-function: cubic-bezier(0.1, 1, 0.1, 1);
       padding-right: calc(100vw - 100%);
       width: 100vw;
       margin: 0px;
@@ -72,29 +72,27 @@
 
     .quote-text{
       font-family: "Quote Font", sans-serif;
+      font-size: 30px;
       border-radius: 40px;
       position: absolute;
       word-wrap: normal;
       text-align: end;
-      top: 20%;
+      top: 10%;
       color:white;
-      font-size: 50px;
       margin-left: 4%;
       width: fit-content;
       padding: 20px;
-      background-color: rgba(32, 32, 32, 0.3);
+      background-color: rgba(1, 1, 1, 0.4);
     }
 
     .random-text{
       font-family: "Image Font", "Quote Font";
-      text-align: center;
+      text-align: left;
       position: absolute;
-      word-wrap: normal;
-      font-size: 30px;
+      font-size: 27px;
       color: silver;
-      width: 750px;
       margin-left: 4%;
-      top: 75%;
+      top: 65%;
     }
 
     .quote-text::before {
@@ -116,6 +114,16 @@
     }
 
     
+    .stuff{
+      background-image: url(../images/head4.jpg);
+      background-color: rgba(255, 255, 255, 0.7);
+      margin: 1%;
+      border-radius: 40px;
+      box-shadow: 0px 5px 5px #00000021,
+                  0px -5px 5px #00000021,
+                  5px  0px 5px #00000021,
+                  -5px 0px 5px #00000021;
+    }
 
     .top {
       display: inline-block; /* Display the songs side-by-side */
@@ -144,8 +152,9 @@
       padding-top: 30px;
       padding-left: 30px;
       padding-right: 5px;
-      background: linear-gradient(45deg, rgba(216,216,216,0.4) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(216,216,216,0.4) 100%);
+      background: linear-gradient(45deg, rgba(216,216,216,0.8) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(216,216,216,0.8) 100%);
       border-radius: 10px;
+      box-shadow: 10px 5px 5px rgba(50, 50, 50, 0.4) ;
       overflow-x: auto;
       white-space: nowrap;
       scrollbar-width: thin;
@@ -196,8 +205,9 @@
       padding-bottom: 25px;
       padding-top: 15px;
       padding-left: 30px;
+      box-shadow: 10px 5px 5px rgba(50, 50, 50, 0.4) ;
       padding-right: 5px;
-      background: linear-gradient(45deg, rgba(216,216,216,0.4) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(216,216,216,0.4) 100%);
+      background: linear-gradient(45deg, rgba(216,216,216,0.8) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(216,216,216,0.8) 100%);
       border-radius: 10px;
       overflow-x: auto;
       white-space: nowrap;
@@ -237,6 +247,7 @@
 
     .songs img{
       padding: 0;
+      z-index: 2;
       border-radius: 20%;
       margin: 0;
       height: 250px;
@@ -245,12 +256,13 @@
     .songs-list {
       position: relative;
       margin-left: 50px;
+      box-shadow: 10px 5px 5px rgba(50, 50, 50, 0.4) ;
       margin-right: 90px;
       padding-bottom: 25px;
       padding-top: 15px;
       padding-left: 30px;
       padding-right: 5px;
-      background: linear-gradient(45deg, rgba(216,216,216,0.4) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(216,216,216,0.4) 100%);
+      background: linear-gradient(45deg, rgba(216,216,216,0.8) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(216,216,216,0.8) 100%);
       border-radius: 10px;
       overflow-x: auto;
       white-space: nowrap;
@@ -260,7 +272,7 @@
 
     .songs:hover {
       transform: scale(1.1); /* Increase the size of the song when hovered */
-      z-index: 1; /* Bring the hovered song to the front */
+      z-index: 0; /* Bring the hovered song to the back */
       box-shadow: 0px 10px 5px rgba(50, 50, 50, 0.4),
                   0px -10px 5px rgba(50, 50, 50, 0.3),
                   10px 0px 5px rgba(50, 50, 50, 0.3),
@@ -306,7 +318,7 @@
       padding-bottom: 25px;
       animation: scroll 15s ease-in-out infinite;
       padding-top: 15px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(218, 216, 216, 0.4) 50%, rgba(255,255,255,0.2) 100%);
+      background: none;
     }
 
     /* Define the "scroll" animation */
@@ -356,6 +368,59 @@
                  -10px 0px 5px rgba(50, 50, 50, 0.3);
     }
 
+
+    .wood-stuff{
+      background-image: url(../images/banner_2.jpeg);
+      margin: 0;
+    }
+
+
+    /* captions test */
+
+    figure {
+      position: relative; /* Make the figure container relative */
+      display: inline-block; /* Set the container to display as an inline-block element */
+    }
+
+    figure img{
+      display: block; /* Remove any default spacing between the image and the caption */
+      width: 100%; /* Set the image width to fill the container */
+      height: auto; /* Set the image height to automatically adjust based on the width */
+      transition: filter 0.3s ease-in-out; 
+    }
+
+    figure:hover img {
+      filter: brightness(50%); /* Reduce the brightness of the image when the user hovers over the figure */
+    }
+
+    figcaption {
+      position: absolute; /* Position the caption absolutely inside the figure container */
+      font-family: "Image Font";
+      top: 50%; /* Position the top of the caption halfway down the figure container */
+      left: 50%; /* Position the left side of the caption halfway across the figure container */
+      transform: translate(-50%, -50%); /* Move the caption up and left by half its width and height */
+      color:white;
+      padding: 10px;
+      opacity: 0;
+      z-index: 1;
+      text-align: center;
+    }
+
+
+    figure:hover figcaption {
+      opacity: 1; /* Show the caption when the user hovers over the figure */
+    }
+
+   /* headings and font stuff */
+
+    .Heading {
+      margin:0;
+      padding:0;
+      margin-left: 10%;
+      font-family: "Heading Font";
+      font-size: 70px;
+    }
+
    /* fonts */
 
     @font-face {
@@ -368,7 +433,7 @@
     }
     @font-face {
       font-family: "Heading Font";
-      src: url("../fonts/PoiretOne-Regular.ttf");
+      src: url("../fonts/Monoton-Regular.ttf");
     }
 
   </style>
@@ -378,38 +443,43 @@
     <li class="quote">
       <div class="quote-background">
         <div class="quote-text">
-         <big style="font-size: 80px;"> We dont have music</big>
+         <big style="font-size: 60px;"> We dont have music<br></big>
           you like<br>
           in fact we will<br> 
-          show you the right
+          show you the right<br>
           music you need to hear
+        <p style="text-align:left; padding-left:60px">- Meanius TDM</p>
         </div>
         <br>
         <div class="random-text">
-          some random text which is in grey color <br>
-          so that we can match the github.com wala themegga 
-          adsssffffffffffffffffasdfasdfadfasdf sdf adf asdf asdf af<br>
-          asdfas sdf asdfas f ad asd fas df af 
+          Are you tired of reading music reviews that are shallow, biased, or downright unhelpful? <br>
+          Look no further than our critical music review website!<br>
+          With our honest and objective evaluations of musical works, <br>
+          we provide valuable insights that are highly sought after<br>
+          audiences. <br><br>
+          Our detailed and thoughtful critiques of music are the gold standard for excellence in <br>the industry.
         </div>
       </div>
     </li>
     <li class="quote2" >
       <div class="quote-background">
         <div class="quote-text">
-         <big style="font-size: 80px;"> We dont have music</big>
-          you like<br>
-          in fact we will<br> 
-          show you the right
-          music you need to hear
+         <big style="font-size: 50px; font-weight:900;"> There are two kinds
+          <br> of music:</big><br>
+         good and bad. <br>
+         Unfortunately, most people <br>
+         prefer the latter." <br>
+        <p style="text-align:center">- Leopold Stokowski</p>
         </div>
         <br>
         <div class="random-text">
-          some random text which is in grey color so that <br>
-          we can match the github.com wala 
-          adsssffffffffffffffffasdfasdfadfasdf sdf adf asdf asdf af asdfas <br>
-          sdf asdfas f ad asd fas df af 
-        </div>
-
+          Are you tired of reading music reviews that are shallow, biased, or downright unhelpful? <br>
+          Look no further than our critical music review website!<br>
+          With our honest and objective evaluations of musical works, <br>
+          we provide valuable insights that are highly sought after<br>
+          audiences. <br><br>
+          Our detailed and thoughtful critiques of music are the gold standard for excellence in <br>the industry.
+        </div>         
       </div>
     </li>
 
@@ -417,99 +487,166 @@
       <div class="quote-background">
 
         <div class="quote-text">
-         <big style="font-size: 80px;"> We dont have music</big>
-          you like<br>
-          in fact we will<br> 
-          show you the right
-          music you need to hear
+         <big style="font-size: 70px;"> There is no such thing</big>
+          as bad music<br>
+          only badly played music.<br> 
+        <p style="text-align:center">- Arturo Toscanini</p>
         </div>
-        <br>
+
         <div class="random-text">
-          some random text which is in grey color so that <br>
-          we can match the github.com wala themegga <br> 
-          adsssffffffffffffffffasdfasdfadfasdf sdf adf asdf asdf af asdfas sdf asdfas f ad asd fas df af 
-        </div>
+          Are you tired of reading music reviews that are shallow, biased, or downright unhelpful? <br>
+          Look no further than our critical music review website!<br>
+          With our honest and objective evaluations of musical works, <br>
+          we provide valuable insights that are highly sought after<br>
+          audiences. <br><br>
+          Our detailed and thoughtful critiques of music are the gold standard for excellence in <br>the industry.
+        </div>         
+      </div>
+        <br>
+
       </div>
     </li>
+
     <li class="quote">
       <div class="quote-background">
         <div class="quote-text">
-         <big style="font-size: 80px;"> We dont have music</big>
+         <big style="font-size: 60px;"> We dont have music<br></big>
           you like<br>
           in fact we will<br> 
-          show you the right
+          show you the right<br>
           music you need to hear
+        <p style="text-align:left; padding-left:60px">- Meanius TDM</p>
         </div>
         <br>
+
         <div class="random-text">
-          some random text which is in grey color so that<br>
-           we can match the github.com wala themegga <br>
-          adsssffffffffffffffffasdfasdfadfasdf sdf adf asdf asdf af asdfas sdf asdfas f ad asd fas df af 
-        </div>
+          Are you tired of reading music reviews that are shallow, biased, or downright unhelpful? <br>
+          Look no further than our critical music review website!<br>
+          With our honest and objective evaluations of musical works, <br>
+          we provide valuable insights that are highly sought after<br>
+          audiences. <br><br>
+          Our detailed and thoughtful critiques of music are the gold standard for excellence in <br>the industry.
+        </div>         
       </div>
     </li>
     <li class="quote2" >
       <div class="quote-background">
-
         <div class="quote-text">
-         <big style="font-size: 80px;"> We dont have music</big>
-          you like<br>
-          in fact we will<br> 
-          show you the right
-          music you need to hear
+         <big style="font-size: 50px; font-weight:900;"> There are two kinds
+          <br> of music:</big><br>
+         good and bad. <br>
+         Unfortunately, most people <br>
+         prefer the latter." <br>
+        <p style="text-align:center">- Leopold Stokowski</p>
         </div>
         <br>
-        <div class="random-text">
-          some random text which is in grey color so that we can match the <br>
-          github.com wala themegga <br>
-          adsssffffffffffffffffasdfasdfadfasdf sdf adf asdf asdf af asdfas sdf asdfas f ad asd fas df af 
-        </div>
 
+        <div class="random-text">
+          Are you tired of reading music reviews that are shallow, biased, or downright unhelpful? <br>
+          Look no further than our critical music review website!<br>
+          With our honest and objective evaluations of musical works, <br>
+          we provide valuable insights that are highly sought after<br>
+          audiences. <br><br>
+          Our detailed and thoughtful critiques of music are the gold standard for excellence in <br>the industry.
+        </div>         
       </div>
+        
     </li>
 
   </ul>
 
-  <h1>artists</h1> 
+<!--  end of fancy intro page  -->
+
+<br>
+<div class="stuff">
+  <p class="Heading">TOP Artists</p> 
   <ul class="top-list" >
-    <li class="top"><a href="https://youtube.com"><img src="../images/artist/rick_astley.png" alt="top1"></a></li>
-    <li class="top"><img src="../images/artist/pepelisa.jpg" alt="top2"></li>
-    <li class="top"><img src="../images/artist/beethoven.webp" alt="top3"></li>
+    <figure class="top">
+      <img src="../images/artist/rick_astley.png" alt="top1">
+      <figcaption><big style="font-size:25px; font-weight:900;">Rick Astley</big><br><br>
+         7 albums</figcaption>
+    </figure>
+    <figure class="top">
+      <img src="../images/artist/pepelisa.jpg" alt="top2">
+      <figcaption><big style="font-size:25px; font-weight:900;">Pepe Lisa</big><br><br>
+         5 albums</figcaption>
+    </figure>
+    <figure class="top">
+      <img src="../images/artist/beethoven.webp" alt="top3">
+      <figcaption><big style="font-size:25px; font-weight:900;">Ludwig van Beethoven</big><br><br>
+         9 albums</figcaption>
+    </figure>
   </ul>
 
-  <h1>Album List</h1> 
+  <p class="Heading">TOP Albums</p> 
   <ul class="album-list" >
-    <li class="album"><img src="../images/album_covers/Kanye_west/Jesus_is_king.jpg" alt="top1"></li>
-    <li class="album"><img src="../images/album_covers/PepeLisa/trumpoline.png" alt="top3"></li>
-    <li class="album"><img src="../images/album_covers/PepeLisa/synthetica.webp" alt="top2"></li>
+    <figure class="album">
+      <img src="../images/album_covers/Kanye_west/Jesus_is_king.jpg" alt="top1">
+      <figcaption><big style="font-size:25px; font-weight:900;">Jesus_is_king</big><br><br>
+         Kanye West</figcaption>
+    </figure>
+    <figure class="album">
+      <img src="../images/album_covers/PepeLisa/trumpoline.png" alt="top3">
+      <figcaption><big style="font-size:25px; font-weight:900;">Trumpoline</big><br><br>
+         Pepe Lisa</figcaption>
+    </figure>
+    <figure class="album">
+      <img src="../images/album_covers/PepeLisa/synthetica.webp" alt="top2">
+      <figcaption><big style="font-size:25px; font-weight:900;">Synthetica</big><br><br>
+         Pepe Lisa</figcaption>
+    </figure>
   </ul>
 
-  <h1>songs</h1> 
+  <p class="Heading">TOP songs</p> 
   <ul class="songs-list" >
-    <li class="songs"><img src="../images/Songs/Old_estate.jpg" alt="top2"></li>
-    <li class="songs"><img src="../images/Songs/PPAP.jpg" alt="top3"></li>
-    <li class="songs" style="border: solid 1px;"><img src="../images/Songs/Sneed's_feed_and_sneed.jpg" alt="top1"></li>
+    <figure class="songs">
+      <img src="../images/Songs/Old_estate.jpg" alt="top2">
+      <figcaption><big style="font-size:25px; font-weight:900;">The Old Estate</big><br><br>
+         M24, Pete and Bas</figcaption>
+    </figure>
+    <figure class="songs">
+      <img src="../images/Songs/PPAP.jpg" alt="top3"></li>
+      <figcaption><big style="font-size:25px; font-weight:900;">PPAP</big><br><br>
+         Pikorato</figcaption>
+    </figure>
+    <figure class="songs" style="border: solid 1px;">
+      <img src="../images/Songs/Sneed's_feed_and_sneed.jpg" alt="top1">
+      <figcaption><big style="font-size:25px; font-weight:900;">Sneed's Feed n Sneed</big><br><br>
+         Burger Child</figcaption>
+    </figure>
   </ul>
 
     <br>
-  <h1>Check Out other artists</h1>
-  <ul class="artist-list" >
-    <!--  whenever anything is clicked on this artist list take them to artists page 
-            not to the respective artist page but the whole artist page -->
-    <li class="songs"><img src="../images/artist/beethoven.webp" alt="artist1"></li>
-    <li class="songs"><img src="../images/artist/buger_child.jpg" alt="artist2"></li>
-    <li class="songs"><img src="../images/artist/dizzeerascal.webp" alt="artist3"></li>
-    <li class="songs"><img src="../images/artist/kanye_west.jpg" alt="artist4"></li>
-    <li class="songs"><img src="../images/artist/pepelisa.jpg" alt="artist5"></li>
-    <li class="songs"><img src="../images/artist/pete_and_bas.jpg" alt="artist6"></li>
-    <li class="songs"><img src="../images/artist/rick_astley.png" alt="artist7"></li>
-    <li class="songs"><img src="../images/artist/tyler_the_creator.jpg" alt="artist8"></li>
-    <li class="songs"><img src="../images/artist/wiley.png" alt="artist9"></li>
-    <li class="songs"><img src="../images/artist/beethoven.webp" alt="artist1"></li>
-    <li class="songs"><img src="../images/artist/buger_child.jpg" alt="artist2"></li>
-    <li class="songs"><img src="../images/artist/dizzeerascal.webp" alt="artist3"></li>
-    <li class="songs"><img src="../images/artist/kanye_west.jpg" alt="artist4"></li>
-  </ul>
+  
+</div>
+
+<div class="wood-stuff">
+  <h1 style="font-size:40px;color:rgba(218, 214, 214, 0.89);margin-left: 10%; font-family: Heading Font;">
+    <u>Check Out other artists</u>
+  </h1>
+    <ul class="artist-list" >
+      <!--  whenever anything is clicked on this artist list take them to artists page 
+              not to the respective artist page but the whole artist page -->
+      <li class="songs"><img src="../images/artist/beethoven.webp" alt="artist1"></li>
+      <li class="songs"><img src="../images/artist/buger_child.jpg" alt="artist2"></li>
+      <li class="songs"><img src="../images/artist/dizzeerascal.webp" alt="artist3"></li>
+      <li class="songs"><img src="../images/artist/kanye_west.jpg" alt="artist4"></li>
+      <li class="songs"><img src="../images/artist/pepelisa.jpg" alt="artist5"></li>
+      <li class="songs"><img src="../images/artist/pete_and_bas.jpg" alt="artist6"></li>
+      <li class="songs"><img src="../images/artist/rick_astley.png" alt="artist7"></li>
+      <li class="songs"><img src="../images/artist/tyler_the_creator.jpg" alt="artist8"></li>
+      <li class="songs"><img src="../images/artist/wiley.png" alt="artist9"></li>
+      <li class="songs"><img src="../images/artist/beethoven.webp" alt="artist1"></li>
+      <li class="songs"><img src="../images/artist/buger_child.jpg" alt="artist2"></li>
+      <li class="songs"><img src="../images/artist/dizzeerascal.webp" alt="artist3"></li>
+      <li class="songs"><img src="../images/artist/kanye_west.jpg" alt="artist4"></li>
+      <li class="songs"><img src="../images/artist/pepelisa.jpg" alt="artist5"></li>
+      <li class="songs"><img src="../images/artist/pete_and_bas.jpg" alt="artist6"></li>
+      <li class="songs"><img src="../images/artist/rick_astley.png" alt="artist7"></li>
+    </ul>
+</div>
+
+
 
 
 </body>
