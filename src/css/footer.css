@@ -65,3 +65,8 @@
     background-color: transparent;
     text-decoration: none;
 }
+
+.footer-scroll-box {
+    overflow-y: scroll;
+    scrollbar-color: rgb(61, 36, 3, 0.9) rgba(0,0,0,0);
+}
