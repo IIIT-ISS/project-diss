@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: 40% 2px 29% 2px 29%;
     color: white;
+    margin-top: 20px;
 }
 
 .footer-col {
@@ -68,5 +69,5 @@
 
 .footer-scroll-box {
     overflow-y: scroll;
-    scrollbar-color: rgb(61, 36, 3, 0.9) rgba(0,0,0,0);
+    scrollbar-color: rgba(61, 36, 3, 0.9) rgba(0, 0, 0, 0);
 }
