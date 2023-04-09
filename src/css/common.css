@@ -1,3 +1,6 @@
+@import url("./fonts.css");
+
+
 body {
     overflow-X: hidden;
     margin: 0;
@@ -14,8 +17,10 @@ body {
     padding-left: 10px;
     padding-top: 2px;
     padding-bottom: 2px;
+    font-family: "Temp Quote Font";
     height: 65px;
 }
+
 
 .meanius-item {
     grid-row: 1;

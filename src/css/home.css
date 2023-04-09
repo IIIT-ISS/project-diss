@@ -1,3 +1,6 @@
+@import url("./fonts.css");
+
+
 .animator {
     list-style: none;
     display: flex;
@@ -512,21 +515,4 @@ figure:hover figcaption {
     margin-left: 10%;
     font-family: "Heading Font";
     font-size: 70px;
-}
-
-/* fonts */
-
-@font-face {
-    font-family: "Quote Font";
-    src: url("../../fonts/Victor.ttf");
-}
-
-@font-face {
-    font-family: "Image Font";
-    src: url("../../fonts/PoiretOne-Regular.ttf");
-}
-
-@font-face {
-    font-family: "Heading Font";
-    src: url("../../fonts/Monoton-Regular.ttf");
 }

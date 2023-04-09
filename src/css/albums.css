@@ -1,3 +1,6 @@
+@import url("./fonts.css");
+
+
 .artist-box {
     position: relative;
     height: 500px;
@@ -38,14 +41,16 @@
 
 .artist-box-name {
     font-weight: bolder;
-    font-size: 80px;
+    font-family: 'Quote Font';
+    font-size: 70px;
     border-radius: 30px;
     top: 17%;
     left: 33%;
 }
 
 .artist-box-desc {
-    font-size: 16px;
+    font-family: 'Description font';
+    font-size: 15px;
     width: 650px;
     top: 66%;
     left: 32%;
@@ -104,6 +109,10 @@
     align-items: start;
 }
 
+h1 {
+    font-family: 'Heading Font';
+}
+
 .album:hover {
     height: 375px;
 }
@@ -139,6 +148,14 @@
 
 .album-caption {
     text-align: center;
+    font-family: 'Image Font';
+    font-weight: 1000;
+    margin-left: -50px;
+}
+
+figcaption{
+    font-family: 'Image Font';
+    font-weight: 1000;
 }
 
 .album-caption p {
