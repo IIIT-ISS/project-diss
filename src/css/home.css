@@ -20,25 +20,46 @@
     /* Start at 0% horizontal position */
   }
 
-  25% {
+  12.5% {
     transform: translateX(-100%);
     /* Start at 0% horizontal position */
   }
 
-  50% {
+  25% {
     transform: translateX(-200%);
     /* Start at 0% horizontal position */
   }
 
-  75% {
+  37.5% {
     transform: translateX(-300%);
     /* Start at 0% horizontal position */
   }
 
-  100% {
+  50% {
     transform: translateX(-400%);
     /* Start at 0% horizontal position */
   }
+
+  62.5% {
+    transform: translateX(-300%);
+    /* Start at 0% horizontal position */
+  }
+
+  75% {
+    transform: translateX(-200%);
+    /* Start at 0% horizontal position */
+  }
+
+  87.5% {
+    transform: translateX(-100%);
+    /* Start at 0% horizontal position */
+  }
+
+  100% {
+    transform: translateX(0%);
+    /* Start at 0% horizontal position */
+  }
+
 }
 
 .quote {
