@@ -102,7 +102,7 @@
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(216, 216, 216, 0.6));
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(216, 216, 216, 0.8));
     border-radius: 10px;
     height: 300px;
     width: 300px;
@@ -137,6 +137,23 @@ h1 {
     flex-basis: 35%;
 }
 
+.album-6:hover {
+    flex-basis: 300px;
+}
+
+.album-7:hover {
+    flex-basis: 300px;
+}
+
+.album-8:hover {
+    flex-basis: 300px;
+}
+
+.album-9:hover {
+    flex-basis: 300px;
+}
+
+
 .album-shadow {
     box-shadow: -20px 0px 5px rgba(50, 50, 50, 0.7);
 }
@@ -150,6 +167,7 @@ h1 {
     text-align: center;
     font-family: 'Image Font';
     font-weight: 1000;
+    color: rgb(0, 0, 0);
 }
 
 figcaption {
