@@ -125,6 +125,19 @@
                   -5px 0px 5px #00000021;
     }
 
+
+    @keyframes list-ani{
+      0% {
+        transform: translateX(-10%); /* Start at 0% horizontal position */
+      }
+      50% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(-10%); /* Start at 0% horizontal position */
+      }
+    }
+
     .top {
       display: inline-block; /* Display the songs side-by-side */
       margin-right: 30px; /* Add some space between the songs */
@@ -132,6 +145,7 @@
       border-radius: 100%;
       box-shadow: 10px 5px 5px rgba(50, 50, 50, 0.4) ;
       width: 300px;
+      animation: list-ani 5s linear infinite;
       height: 300px;
       text-align: center;
     }
@@ -189,7 +203,10 @@
       border-radius: 3%;
       box-shadow: 10px 5px 5px rgba(50, 50, 50, 0.4) ;
       height: 300px;
+      animation: list-ani 5s linear infinite;
     }
+
+    
 
     .album img{
       padding: 0;
@@ -380,6 +397,7 @@
     figure {
       position: relative; /* Make the figure container relative */
       display: inline-block; /* Set the container to display as an inline-block element */
+      animation: fig-ani 10s linear infinite;
     }
 
     figure img{
@@ -404,6 +422,18 @@
       opacity: 0;
       z-index: 1;
       text-align: center;
+    }
+
+    @keyframes fig-ani{
+      0% {
+        transform: translateX(0%); /* Start at 0% horizontal position */
+      }
+      50% {
+        transform: translateX(-140%);
+      }
+      100% {
+        transform: translateX(0%); /* Start at 0% horizontal position */
+      }
     }
 
 
@@ -586,12 +616,12 @@
          Kanye West</figcaption>
     </figure>
     <figure class="album">
-      <img src="../images/album_covers/PepeLisa/trumpoline.png" alt="top3">
+      <img src="../images/album_covers/pepe_lisa/trumpoline.jpg" alt="top3">
       <figcaption><big style="font-size:25px; font-weight:900;">Trumpoline</big><br><br>
          Pepe Lisa</figcaption>
     </figure>
     <figure class="album">
-      <img src="../images/album_covers/PepeLisa/synthetica.webp" alt="top2">
+      <img src="../images/album_covers/pepe_lisa/synthetica.jpg" alt="top2">
       <figcaption><big style="font-size:25px; font-weight:900;">Synthetica</big><br><br>
          Pepe Lisa</figcaption>
     </figure>
