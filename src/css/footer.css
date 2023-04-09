@@ -75,3 +75,11 @@
     overflow-y: scroll;
     scrollbar-color: rgba(61, 36, 3, 0.9) rgba(0, 0, 0, 0);
 }
+
+.link-icon::after {
+    content: '\f35d';
+    font-family: 'FA Font';
+    font-size: 10px;
+    display: inline-block;
+    margin-left: 5px;
+}
