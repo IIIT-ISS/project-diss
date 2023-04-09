@@ -6,7 +6,7 @@
     display: flex;
     position: relative;
     white-space: nowrap;
-    animation: why 20s steps(1, end) infinite;
+    animation: why 30s steps(1, end) infinite;
     animation-timing-function: cubic-bezier(0.1, 1, 0.1, 1);
     padding-right: calc(100vw - 100%);
     width: 100vw;
@@ -120,7 +120,7 @@
 
 
 .stuff {
-    background-image: url(../../images/head4.jpg);
+    background-image: url(../../images/banner_4.jpg);
     background-color: rgba(255, 255, 255, 0.7);
     margin: 1%;
     border-radius: 40px;
@@ -438,7 +438,7 @@
 
 
 .wood-stuff {
-    background-image: url(../../images/banner_2.jpeg);
+    background-image: url(../../images/banner_3.jpg);
     margin: 0;
 }
 
@@ -515,4 +515,5 @@ figure:hover figcaption {
     margin-left: 10%;
     font-family: "Heading Font";
     font-size: 70px;
+    color: white;
 }
