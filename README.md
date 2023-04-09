@@ -107,25 +107,25 @@ The assumptions page consists of all the assumptions that were made deviating or
 - Contains the source code for the entire project
 - At the root of this dir we have HTML pages for "Home", "About" and "FAQ"
 
-    #### Subdir `css`
+  #### Subdir `css`
 
-     - All css code lives here, split into files by category
+  - All css code lives here, split into files by category
 
-    #### Subdir `artists`
+  #### Subdir `artists`
 
-     - index.html` is the "Artists" page.
-     - Each artist has a subdir within this, identified with a unique number
-     - Such a subdir has an `index.html` page which is the "Artist Albums" page, and many
-       other pages for "Album Songs" that are of the form `album-{x}.html`
-
+  - index.html` is the "Artists" page.
+  - Each artist has a subdir within this, identified with a unique number
+  - Such a subdir has an `index.html` page which is the "Artist Albums" page, and many
+    other pages for "Album Songs" that are of the form `album-{x}.html`
 
 ### The `images` dir
 
 This consists of images for all the songs, albums and artists, and other backgrounds and logos used in the website:
+
 - The artist page consists of the profile picture (small) and the banner picture (large) for all the artists.
 - The albums page consists of many artists directories in each of it are all the album covers.
 - The Songs page against consists of many directories in each of it are the covers of top 3 songs.
-- Other images include a few banners images we used, 3 home page images, 1 texture for headings 
+- Other images include a few banners images we used, 3 home page images, 1 texture for headings
   background, a background for the whole webpage and finally the logos.
 
 ### The `fonts` dir
@@ -140,6 +140,6 @@ This consists of images for all the songs, albums and artists, and other backgro
 
 ### The `webpage_content` dir
 
-- This consists of all the content filled in the webpage in text files. 
-- It has information like albums and artists descriptions (including year of release), 
+- This consists of all the content filled in the webpage in text files.
+- It has information like albums and artists descriptions (including year of release),
   all the song names for each album, their length etc.
