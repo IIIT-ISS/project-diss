@@ -1,4 +1,4 @@
-# Team DISS
+# Project Meanius - by Team DISS
 
 Web development team project for 2nd semester spring 2023 ISS course.
 
@@ -11,7 +11,7 @@ Group name (DISS)
 
 ## Documentation
 
-This is the documentation for the project 'Meanius' a music review website.
+This is the documentation for the project 'Meanius' - a music review website.
 
 ## General Usage
 
@@ -113,10 +113,10 @@ The assumptions page consists of all the assumptions that were made deviating or
 
   #### Subdir `artists`
 
-  - index.html` is the "Artists" page.
+  - `index.html` is the "Artists" page.
   - Each artist has a subdir within this, identified with a unique number
   - Such a subdir has an `index.html` page which is the "Artist Albums" page, and many
-    other pages for "Album Songs" that are of the form `album-{x}.html`
+    other pages for "Album Songs" that are of the form `album (x).html`
 
 ### The `images` dir
 
@@ -130,9 +130,9 @@ This consists of images for all the songs, albums and artists, and other backgro
 
 ### The `fonts` dir
 
-- This directory consists of fonts in .ttf ( true type fonts ) downloaded from websites like nerdfonts.com
+- This directory consists of fonts in `.ttf` (true type fonts) downloaded from websites like nerdfonts.com
   fonts.google.com and made sure the licenses are agreed upon.
-- It also consists of fonts.txt which contains a guide of all the font placements.
+- It also consists of `fonts.txt` which contains a guide of all the font placements.
 
 ### The `features` dir
 
