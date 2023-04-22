@@ -35,6 +35,14 @@ body {
   box-shadow: 10px 5px 5px rgba(50, 50, 50, 0.4);
 }
 
+.about1{
+  margin: 50px;
+}
+
+.about2{
+  margin: 50px;
+}
+
 .faq-box {
   text-align: left;
   height: 40px;
@@ -46,4 +54,13 @@ body {
 
 .faq-box:hover {
   height: fit-content;
+}
+
+.answers {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.faq-box:hover .answers {
+  opacity: 1;
 }
