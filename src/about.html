@@ -44,10 +44,10 @@
           <!-- About -->
 
 
-    <div class="box about1" style="height:250px; color: rgba(63, 38, 0, 0.934); font-family: 'Album Font'">
+    <div class="box about1">
       <h3 style="margin-bottom:0px; margin-top:10px; font-family: 'Heading Font'">About Menius</h3>
     </div>
-    <div class="box about2" style="height:400px; color: rgba(63, 38, 0, 0.934); font-family: 'Album Font'">
+    <div class="box about2">
       <h3 style="margin-bottom:0px; margin-top:10px; font-family: 'Heading Font'">About Us</h3>
     </div>
 
@@ -175,18 +175,7 @@
       "Thank you for visiting our page, and we hope you enjoy exploring all that we have to offer!",
     ];
 
-    const text2 = [
-        "DISS, stands for duo for ISS, is a duo consisting of ",
-        "Ankith Pai (ankith.pai@research.iiit.ac.in) and Abhiram Tilak (abhiram.tilak@research.iiit.ac.in)",
-        "As we began working on our music review website, we drew inspiration from a number of other websites that we admired. ",
-        "We looked at how they presented their content, how they engaged with their readers, and how they built a sense of community around their platform.",
-        "One thing that stood out to us was how many of these websites were able to achieve great things with minimal resources. ",
-        "They didn't have huge budgets or teams of people working around the clock. Instead, they focused on what really mattered: creating quality content.",
-        "This inspired us to take a similar approach with our own website. We knew that we didn't have the same resources as some of the bigger players in the industry, but we also knew that we had something unique to offer. ",
-        "By focusing on what we were good at and being resourceful with what we had, we were able to build a website that we're proud of.",
-    ];
-
-    const delay = 20;
+    const delay = 15;
     let i = 0;
 
     function typeEffect1() {
@@ -207,9 +196,23 @@
       }
     }
 
+    const text2 = [
+        "DISS, stands for duo for ISS, is a duo consisting of ",
+        "Ankith Pai (ankith.pai@research.iiit.ac.in) and Abhiram Tilak (abhiram.tilak@research.iiit.ac.in)",
+        "As we began working on our music review website, we drew inspiration from a number of other websites that we admired. ",
+        "We looked at how they presented their content, how they engaged with their readers, and how they built a sense of community around their platform.",
+        "One thing that stood out to us was how many of these websites were able to achieve great things with minimal resources. ",
+        "They didn't have huge budgets or teams of people working around the clock. Instead, they focused on what really mattered: creating quality content.",
+        "This inspired us to take a similar approach with our own website. We knew that we didn't have the same resources as some of the bigger players in the industry, but we also knew that we had something unique to offer. ",
+        "By focusing on what we were good at and being resourceful with what we had, we were able to build a website that we're proud of.",
+    ];
+
+
+    let k = 0;
+
     function typeEffect2() {
-      if (i < text2.length) {
-        const letters = text2[i].split('');
+      if (k < text2.length) {
+        const letters = text2[k].split('');
         let j = 0;
         const existingText = document.querySelector('.about2').innerHTML;
         document.querySelector('.about2').innerHTML = existingText + '<br><br>';
@@ -218,7 +221,7 @@
           j++;
           if (j >= letters.length) {
             clearInterval(interval);
-            i++;
+            k++;
             setTimeout(typeEffect2, 300);
           }
         }, delay);
