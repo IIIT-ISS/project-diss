@@ -1,9 +1,23 @@
 @import url("./fonts.css");
 @import url("./albums.css");
 
+/* "Quote" (wooden box) stuff */
+.quote_box {
+  height: 500px;
+  border-radius: 30px;
+  background-image: url("../../images/banner_3.jpg");
+  background-size: contain;
+  margin: auto;
+}
 
+.gradient {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.594));
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
 
-  /* spotlight image */
+/* Spotlight stuff */
 .spotlight_image {
   pointer-events: none;
   position: absolute;
@@ -11,13 +25,9 @@
   left: 150px;
 }
 
-
-
-  /* next_drop heading */
 h2 {
   text-align: center;
   text-decoration: underline;
-  text-decoration-thickness: 2px;
   font-family: "Heading Font";
   font-size: 40px;
   color: rgba(151, 14, 14, 0.826);
@@ -27,21 +37,14 @@ h2:hover {
   color: black;
 }
 
-
-
-  /* countdown */
 #countdown {
   font-family: "Time Font";
   color: rgba(69, 1, 107, 0.913);
-  font-size: 80px;
+  font-size: 70px;
   margin: 30px;
   text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7);
 }
 
-
-
-
-  /* quote-box */
 .name {
   text-align: center;
   font-family: "Heading Font";
@@ -52,26 +55,12 @@ h2:hover {
   text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7);
 }
 
-.gradient {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.594));
-  border-radius: 30px;
-  width: 100vw;
-}
-
 hr {
   margin: 0;
   margin-left: 10%;
   margin-right: 10%;
   color: rgba(240, 248, 255, 0.842);
   border: 2px double;
-}
-
-.quote_box {
-  display: flex;
-  height: 500px;
-  border-radius: 30px;
-  background-image: url("../../images/banner_3.jpg");
-  background-size: contain;
 }
 
 .quote_list {
@@ -105,7 +94,7 @@ hr {
   scale: 1.3;
 }
 
-.quote1{
+.quote1 {
   margin-left: 40px;
   margin-right: 40px;
   padding: 5px;
@@ -120,7 +109,7 @@ hr {
   transition: opacity 0.5s ease-in-out;
 }
 
-.quote2{
+.quote2 {
   margin-left: 40px;
   margin-right: 40px;
   padding: 5px;
@@ -133,40 +122,38 @@ hr {
   color: aliceblue;
   font-family: "Quote Font";
   transition: opacity 0.5s ease-in-out;
-} 
+}
 
 
-.quote1:hover{
+.quote1:hover {
   border-width: 1px;
   border-style: groove;
   border-color: aliceblue;
   box-shadow: 10px 10px 10px black;
 }
 
-.quote2:hover{
+.quote2:hover {
   border-width: 1px;
   border-style: groove;
   border-color: aliceblue;
   box-shadow: 10px 10px 10px black;
 }
 
-.quote1.hidden{
+.quote1.hidden {
   color: rgba(240, 248, 255, 0);
   background-color: rgba(0, 0, 0, 0);
 }
 
-.quote2.hidden{
+.quote2.hidden {
   color: rgba(240, 248, 255, 0);
   background-color: rgba(0, 0, 0, 0);
 }
 
-.active{
+.active {
   transform: translateX(0);
 }
 
- /* past reviews */
-
-
+/* past reviews */
 .past_review_heading::before {
   right: -2px;
   position: relative;
@@ -186,30 +173,30 @@ hr {
   font-family: "FA Font";
 }
 
-.past_box{
+.past_box {
   font-family: "Song Font";
-  color:rgba(63,38,0,0.934);
+  color: rgba(63, 38, 0, 0.934);
   height: 60px;
 }
 
-.past_box:hover{
+.past_box:hover {
   height: fit-content;
 }
 
-.tab{
+.tab {
   margin-left: 1%;
 }
 
-#past_username{
+#past_username {
   font-family: "Album Font";
 }
 
-.past_rating{
+.past_rating {
   position: relative;
   left: 70%;
   right: 10%;
   top: -15px;
-  font-family: "Quote Font"; 
+  font-family: "Quote Font";
   font-weight: 1000;
   border-radius: 30px;
   border-style: double;
@@ -218,16 +205,16 @@ hr {
   height: fit-content;
 }
 
-.rating_box{
+.rating_box {
   display: flex;
   height: 25px;
 }
 
-#past_review_album_name{
+#past_review_album_name {
   margin-left: 1%;
 }
 
- /* review input panel */
+/* review input panel */
 .review_heading {
   text-align: center;
   font-family: "Heading Font";
@@ -241,65 +228,65 @@ hr {
 .review_heading:hover::after {
   font-family: "Temp Quote Font";
   font-size: 20px;
-  content: " (The only thing that matter's to us)";
+  content: " (The only thing that matters to us)";
+}
+
+.input_box {
+  background: #00000055;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 30px;
+  border-radius: 30px;
+  border-style: groove;
+  border-width: 2px;
+  height: 74%;
+}
+
+.review_inputs {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding: 0;
+}
+
+.review_input_row_1 {
+  color: rgba(255, 255, 255, 0.683);
+  background-color: rgba(0, 0, 0, 0.287);
+  border-radius: 20px;
+  font-size: 16px;
+  border-style: groove;
+  text-align: center;
+  margin: 5px;
+  padding: 4px;
 }
 
 .title {
-  color:rgba(255, 255, 255, 0.683);
-  background-color: rgba(0, 0, 0, 0.287);
-  margin-left: 5%;
-  padding-left: 40px;
-  padding-top: 5px;
-  border-radius: 20px;
-  height: 5vh;
-  font-size: 16px;
-  width: 50vw;
-  text-align: center;
-  border-style: groove;
+  flex-basis: 60%;
 }
 
 .album_name {
-  color:rgba(255, 255, 255, 0.683);
-  background-color: rgba(0, 0, 0, 0.287);
-  margin-left: 0.5%;
-  text-align: center;
-  padding-top: 5px;
-  height: 5vh;
-  border-style: groove;
-  font-size: 16px;
-  border-radius: 20px;
-  width: 10vw;
+  flex-basis: 25%;
 }
 
 .review-rating {
-  color:rgba(255, 255, 255, 0.683);
-  background-color: rgba(0, 0, 0, 0.287);
-  margin-left: 0.5%;
-  margin-right: 3%;
-  border-style: groove;
-  padding-top: 2px;
-  height: 5vh;
-  border-radius: 20px;
-  width: 10vw;
+  flex-basis: 15%;
 }
 
-.review_inputs{
-  height: 5vh;
-}
-
-.review{
-  height: 35vh;
-  margin-left: 65px;
-  width: 71vw;
+.review {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.413);
-  color:rgba(240, 248, 255, 0.707);
+  color: rgba(240, 248, 255, 0.707);
   padding: 30px;
   padding-top: 20px;
   font-size: 16px;
   line-height: 25px;
-  display: flex;
   border-style: groove;
+  height: 220px;
 }
 
 .review-rating input[type="radio"] {
@@ -320,55 +307,37 @@ hr {
 }
 
 .review-rating label:hover,
-.review-rating input:checked ~ label {
+.review-rating input:checked~label {
   color: #ffdc0a;
 }
 
-.review-rating input:checked + label:before {
+.review-rating input:checked+label:before {
   content: '\f005';
   font-family: 'FA Font';
   font-weight: 900;
   color: #ffdc0a;
 }
 
-.input_box{
-  background: #00000055;
-  height: fit-content;
-  width: 85vw;
-  padding: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin: 30px;
-  border-radius: 30px;
-  border-style: groove;
-  border-width:2px;
-}
-
 .username {
-  color:rgba(255, 255, 255, 0.683);
+  flex-basis: 40%;
+  color: rgba(255, 255, 255, 0.683);
   background-color: rgba(0, 0, 0, 0.287);
   border-radius: 20px;
-  height: 5vh;
   font-size: 16px;
-  width: 20vw;
   text-align: center;
-  margin-left: -57%;
-  margin-bottom: 2%;
   border-style: groove;
 }
 
-.submit_button{
-  position: relative;
-  left: 50%;
-  background-color:rgba(0, 0, 0, 0.417);
+.submit_button {
+  background-color: rgba(0, 0, 0, 0.417);
   color: rgba(240, 248, 255, 0.683);
   border-radius: 30px;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 18px;
+  padding: 6px;
   border-style: groove;
 }
 
-.submit_button:hover{
-  background-color:rgba(247, 247, 247, 0.466);
+.submit_button:hover {
+  background-color: rgba(247, 247, 247, 0.466);
   color: rgba(0, 0, 0, 0.865);
 }

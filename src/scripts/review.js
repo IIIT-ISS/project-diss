@@ -112,8 +112,8 @@ function update_reviews() {
     reviews_page.innerHTML = "";
     for (const row of reviews) {
         reviews_page.innerHTML += `
-        <li style="margin-left:90px;">
-            <div class="box faq-box past_box" style="font-family: 'Song Font'; color:rgba(63,38,0,0.934)">
+        <li style="margin-left:90px; margin-right:90px;">
+            <div class="box faq-box past_box">
                 <p><b class="past_review_heading">${row.heading}</b></p>
                 <p class="answers rating_box">
                     <b>Album: </b><u id="past_review_album_name">${row.album}</u>

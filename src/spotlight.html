@@ -174,15 +174,15 @@
 
 
     <form id="review-form">
-      <div class="quote_box" style="margin-left:5%; margin-right:5%; height:600px;" >
+      <div class="quote_box" style="width: 90%;">
         <div class="gradient">
           <p class="review_heading">Your Review</p>
           <hr>
           <div class="input_box">
-            <ul class="quote_list review_inputs">
-              <input class="title" type="text" name="heading" id="heading" placeholder="Heading or summary">
-              <input class="album_name" type="text" name="album" id="album" placeholder="Album">
-              <div class="review-rating">
+            <ul class="review_inputs">
+              <input class="review_input_row_1 title" type="text" name="heading" id="heading" placeholder="Heading or summary">
+              <input class="review_input_row_1 album_name" type="text" name="album" id="album" placeholder="Album">
+              <div class="review_input_row_1 review-rating">
                 <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star"></label>
                 <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars"></label>
                 <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars"></label>
@@ -191,9 +191,11 @@
               </div>
             </ul>
             <textarea class="review" name="review" id="review" placeholder="Type your review here..."></textarea>
-            <br>
-            <input class="username" type="text" name="username" id="username" placeholder="Your Name">
-            <button class="submit_button" type="submit"> Submit</button>
+            <div class="review_inputs">
+              <input class="username" type="text" name="username" id="username" placeholder="Your Name">
+              <div style="flex-basis: 60%;"></div>
+              <button class="submit_button" type="submit"> Submit</button>
+            </div>
           </div>
         </div>
       </div>
