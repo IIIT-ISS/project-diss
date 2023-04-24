@@ -1,0 +1,149 @@
+@import url("./fonts.css");
+
+.search-box {
+  width: 60%;
+  margin: auto;
+  background: url("../../images/banner_4.jpg");
+  border-radius: 15px;
+  font-family: "Quote Font";
+}
+
+form {
+  margin-top: 20px;
+  height: 40px;
+}
+
+form#song-search input[type="text"] {
+  margin-top: 10px;
+  margin-left: 5%;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 18px;
+  border: 1px solid grey;
+  float: left;
+  width: 70%;
+  background: rgba(0, 0, 0, 0.6);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  line-height: 20px;
+  color: white;
+  height: 40px;
+}
+
+form#song-search button {
+  margin-top: 10px;
+  margin-right: 5%;
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #572711b8;
+  color: white;
+  border: 1px solid grey;
+  cursor: pointer;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  line-height: 20px;
+  height: 40px;
+}
+
+form#song-search button:hover {
+  background: #7f3513dc;
+}
+
+.search:before {
+  content: "\f002";
+  font-family: "Quote Font";
+}
+
+#song-filter {
+  padding: 10px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+#song-filter-inner {
+  margin: auto;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+#song-filter-inner input[type="number"] {
+  width: 55px;
+}
+
+#songs-list {
+  background: url("../../images/banner_3.jpg");
+  min-height: 50px;
+  border-radius: 20px;
+  color: rgb(200, 220, 220);
+  padding: 10px;
+  width: 90%;
+  margin: auto;
+  font-family: "Song Font";
+  font-size: 22px;
+}
+
+.song-entry {
+  display: flex;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  align-items: center;
+}
+
+.song-entry:hover {
+  border-style: groove;
+  border-width: 1px;
+}
+
+
+.song-entry p {
+  flex-basis: 50px;
+}
+
+.song-entry img {
+  border-radius: 15px;
+}
+
+.track-and-author {
+  flex-basis: 40%;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.track-and-author p {
+  margin: 0;
+}
+
+.itunes-link {
+  color: white;
+  text-decoration: none;
+}
+
+.itunes-link:hover {
+  text-decoration: underline;
+}
+
+.author {
+  font-size: 14px;
+}
+
+.album-name {
+  flex-basis: 40%;
+}
+
+.track-time {
+  flex-basis: 10%;
+}
+
+.song-explicit {
+  font-size: 14px;
+  color: rgb(230, 0, 0);
+  font-family: "Album Font";
+}
