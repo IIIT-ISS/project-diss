@@ -164,104 +164,7 @@
 
     <h1>Past  Reviews</h1>
     <hr style="color:rgba(102, 43, 10, 0.88); margin-bottom:40px">
-    <ol>
-      <li style="margin-left:90px;">
-        <div class="box faq-box past_box" style="font-family: 'Song Font'; color:rgba(63,38,0,0.934)">
-            <p><b class="past_review_heading">One of the most emotional endings for the album, I couldn't hold myself at the end</b></p>
-            <p class="answers rating_box">
-              <b>Album: </b><u id="past_review_album_name">Synthetica</u>
-              <span class="past_rating">8.5</span>
-            </p>
-            <p class="answers" id="past_review">
-              " Despite being crafted by a machine, this album is surprisingly human in its expression of emotion. 
-              The lyrics are introspective and raw, delving into themes of love, loss, and self-discovery. 
-              The production is atmospheric and ethereal, creating a sense of otherworldliness that complements the introspective nature of the lyrics. 
-              Some tracks feel repetitive and formulaic, but overall the album is a captivating exploration of the intersection of technology and emotion. 
-              While it may not surpass the depth and complexity of human-made albums, it's a fascinating glimpse into what AI is capable of creating." 
-            </p>
-            <p class="answers">
-              <b>Date:</b><span class="tab">20/4/2069</span> <span class="tab">|</span> <span class="tab">By User: &nbsp;</span> <span id="past_username">emo_queen_rasta</span>
-            </p>
-        </div>
-      </li>
-      <li style="margin-left:90px;">
-        <div class="box faq-box past_box">
-            <p><b class="past_review_heading">The collapse of the trumpoline feels line an end of an era honestly.</b></p>
-            <p class="answers rating_box">
-              <b>Album: </b><u id="past_review_album_name">Trumpoline</u>
-              <span class="past_rating">9.5</span>
-            </p>
-            <p class="answers" id="past_review">
-              This is a very powerful album and explores the collapse of the well known government of Frump by
-              a mob of soydevs and soyjacks using iToddler devices and javascript using an organized jihad, with 
-              gripping storytelling and raw emotion. The haunting vocals and intricate instrumentals paint 
-              a vivid picture of the tragic events that unfolded as the weak overtook the strong. 
-              With thought-provoking lyrics and dynamic soundscapes, this album is a must-listen for 
-              fans of alternative drill and political commentary. While some may find the subject matter unsettling, 
-              the depth and authenticity of the music make it an unforgettable experience. 
-              Overall, "Trumpoline" is a standout work of art that will leave a lasting impact on listeners.
-            </p>
-            <p class="answers">
-              <b>Date:</b><span class="tab">22/7/2069</span> <span class="tab">|</span> 
-              <span class="tab">By User: &nbsp;</span> <span id="past_username">i_like_piethon</span>
-            </p>
-        </div>
-      </li>
-      <li style="margin-left:90px;">
-        <div class="box faq-box past_box" >
-            <p>
-              <b class="past_review_heading" style="font-size:smaller">
-                  Winter night, it's the 6th October
-                  If I had a one wish for my birthday, it would be some more ten-ten yola.
-                  I'm in the bando, there's no California
-                  I'm tryna count these twenties up sober.
-              </b>
-            </p>
-            <p class="answers rating_box">
-              <b>Album: </b><u id="past_review_album_name">Netscape Nightwatch</u>
-              <span class="past_rating">9.0</span>
-            </p>
-            <p class="answers" id="past_review">
-              " We started off bringin' waps to the label meetings. Freestyle in the Snoochie show, 
-              with a trey-eight tucked in my tracksuit Way back then it was Ellesse Only God knows why I'm here
-              Maybe all the fans wanna see street shi.
-              So I give my young boys the four-by-four, tell them to go to the L, not 3x3
-              They see me and wanted some clout, I rose the crime rate, ask the BBC.
-              They had to go next block for the GBG.
-              See a man get slapped like he just went and made a G.I. Jane joke on G-A-N-G.
-              I jeeted out shh and it won't get leaked."
-            </p>
-            <p class="answers">
-              <b>Date:</b><span class="tab">7/10/2069</span> <span class="tab">|</span> 
-              <span class="tab">By User: &nbsp;</span> <span id="past_username">Su_Mar(turn)_SuFa</span>
-            </p>
-        </div>
-      </li>
-      <li style="margin-left:90px;">
-        <div class="box faq-box past_box" >
-            <p><b class="past_review_heading">Dead album blud!</b></p>
-            <p class="answers rating_box">
-              <b>Album: </b><u id="past_review_album_name">/g/othic</u>
-              <span class="past_rating">1.0</span>
-            </p>
-            <p class="answers" id="past_review">
-              " I know im listening to this album 6 years late, but im listening to it exactly on the release date itself.
-              What the f was that man, not cool, not cool.
-              You be talking about stuff like, my country home, my soil and that like this ain't 1950s fam dis is 2050s
-              All those things are meant to be done by machines automatically, its no not progressive to discuss about
-              such stuff. You deadbeat, dark dressing, moonshine sipping nadzi's should be sent to cities.
-              The place where you live is toxic, need some pesticide to wipe your place with some liberal ideas.
-              I don't like the premise nor the direction this album goes, there are so many
-              things that i don't agree with which makes me uncomfortable. I popped two veins, had to
-              visit my therapist twice a day after listening to this. Now im in hospital with my keyboard."
-            </p>
-            <p class="answers">
-              <b>Date:</b><span class="tab">20/4/2075</span> <span class="tab">|</span> 
-              <span class="tab">By User: &nbsp;</span> <span id="past_username">noob_master_69</span>
-            </p>
-        </div>
-      </li>
-   </ol>
+    <ol id="past-reviews"></ol>
 
     <br>
     <hr style="color:rgba(102, 43, 10, 0.88); margin-bottom:40px">
@@ -270,27 +173,27 @@
         <!-- input box -->
 
 
-    <form>
+    <form id="review-form">
       <div class="quote_box" style="margin-left:5%; margin-right:5%; height:600px;" >
         <div class="gradient">
           <p class="review_heading">Your Review</p>
           <hr>
           <div class="input_box">
             <ul class="quote_list review_inputs">
-              <input class="title" type="text" name="Heading or summary" value="Heading or summary">
-              <input class="album_name"type="text" name="Album" value="Album">
+              <input class="title" type="text" name="heading" id="heading" placeholder="Heading or summary">
+              <input class="album_name" type="text" name="album" id="album" placeholder="Album">
               <div class="review-rating">
-                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 stars"></label>
-                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars"></label>
-                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars"></label>
-                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars"></label>
                 <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star"></label>
+                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars"></label>
+                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars"></label>
+                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars"></label>
+                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 stars"></label>
               </div>
             </ul>
-            <textarea class="review" name="the_review">Type your review here...</textarea>
+            <textarea class="review" name="review" id="review" placeholder="Type your review here..."></textarea>
             <br>
-            <input class="username" type="text" name="username" value="Your Name">
-            <button class="submit_button"> Submit</button>
+            <input class="username" type="text" name="username" id="username" placeholder="Your Name">
+            <button class="submit_button" type="submit"> Submit</button>
           </div>
         </div>
       </div>
@@ -414,5 +317,6 @@
       </div>
     </div>
     <script src="./scripts/spotlight.js"></script>
+    <script src="./scripts/review.js"></script>
   </body>
 </html>
