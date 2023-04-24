@@ -2,8 +2,19 @@
 @import url("./albums.css");
 
 
+
+  /* spotlight image */
+.spotlight_image {
+  pointer-events: none;
+  position: absolute;
+  top: 125px;
+  left: 150px;
+}
+
+
+
+  /* next_drop heading */
 h2 {
-  position: relative;
   text-align: center;
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -12,6 +23,25 @@ h2 {
   color: rgba(151, 14, 14, 0.826);
 }
 
+h2:hover {
+  color: black;
+}
+
+
+
+  /* countdown */
+#countdown {
+  font-family: "Time Font";
+  color: rgba(69, 1, 107, 0.913);
+  font-size: 80px;
+  margin: 30px;
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+  /* quote-box */
 .name {
   text-align: center;
   font-family: "Heading Font";
@@ -22,6 +52,12 @@ h2 {
   text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7);
 }
 
+.gradient {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.594));
+  border-radius: 30px;
+  width: 100vw;
+}
+
 hr {
   margin: 0;
   margin-left: 10%;
@@ -30,21 +66,7 @@ hr {
   border: 2px double;
 }
 
-#countdown {
-  position: relative;
-  font-family: "Time Font";
-  color: rgba(69, 1, 107, 0.913);
-  font-size: 80px;
-  margin: 30px;
-  text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7);
-}
-
-h2:hover {
-  color: black;
-}
-
 .quote_box {
-  position: relative;
   display: flex;
   height: 500px;
   border-radius: 30px;
@@ -81,12 +103,6 @@ h2:hover {
 
 .quote_list img:hover {
   scale: 1.3;
-}
-
-.list {
-  display: flex;
-  padding: 0;
-  list-style: none;
 }
 
 .quote1{
@@ -144,27 +160,215 @@ h2:hover {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.view_class{
-  display: flex;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  min-width: 1450px; 
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
 .active{
   transform: translateX(0);
 }
 
-.spotlight_image {
+ /* past reviews */
+
+
+.past_review_heading::before {
+  right: -2px;
   position: relative;
-  top: -1600px;
+  top: -10px;
+  left: -5px;
+  content: "\201C";
+  font-family: "FA Font";
+  font-size: 10px;
 }
 
-.gradient {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.594));
+.past_review_heading::after {
+  right: -2px;
+  position: relative;
+  top: -10px;
+  content: "\201D";
+  font-size: 10px;
+  font-family: "FA Font";
+}
+
+.past_box{
+  font-family: "Song Font";
+  color:rgba(63,38,0,0.934);
+  height: 60px;
+}
+
+.past_box:hover{
+  height: fit-content;
+}
+
+.tab{
+  margin-left: 1%;
+}
+
+#past_username{
+  font-family: "Album Font";
+}
+
+.past_rating{
+  position: relative;
+  left: 70%;
+  right: 10%;
+  top: -15px;
+  font-family: "Quote Font"; 
+  font-weight: 1000;
   border-radius: 30px;
-  width: 100vw;
+  border-style: double;
+  padding: 10px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.rating_box{
+  display: flex;
+  height: 25px;
+}
+
+#past_review_album_name{
+  margin-left: 1%;
+}
+
+ /* review input panel */
+.review_heading {
+  text-align: center;
+  font-family: "Heading Font";
+  margin: 10px;
+  margin-bottom: 5px;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.826);
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7);
+}
+
+.review_heading:hover::after {
+  font-family: "Temp Quote Font";
+  font-size: 20px;
+  content: " (The only thing that matter's to us)";
+}
+
+.title {
+  color:rgba(255, 255, 255, 0.683);
+  background-color: rgba(0, 0, 0, 0.287);
+  margin-left: 5%;
+  padding-left: 40px;
+  padding-top: 5px;
+  border-radius: 20px;
+  height: 5vh;
+  font-size: 16px;
+  width: 50vw;
+  text-align: center;
+  border-style: groove;
+}
+
+.album_name {
+  color:rgba(255, 255, 255, 0.683);
+  background-color: rgba(0, 0, 0, 0.287);
+  margin-left: 0.5%;
+  text-align: center;
+  padding-top: 5px;
+  height: 5vh;
+  border-style: groove;
+  font-size: 16px;
+  border-radius: 20px;
+  width: 10vw;
+}
+
+.review-rating {
+  color:rgba(255, 255, 255, 0.683);
+  background-color: rgba(0, 0, 0, 0.287);
+  margin-left: 0.5%;
+  margin-right: 3%;
+  border-style: groove;
+  padding-top: 2px;
+  height: 5vh;
+  border-radius: 20px;
+  width: 10vw;
+}
+
+.review_inputs{
+  height: 5vh;
+}
+
+.review{
+  height: 35vh;
+  margin-left: 65px;
+  width: 71vw;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.413);
+  color:rgba(240, 248, 255, 0.707);
+  padding: 30px;
+  padding-top: 20px;
+  font-size: 16px;
+  line-height: 25px;
+  display: flex;
+  border-style: groove;
+}
+
+.review-rating input[type="radio"] {
+  display: none;
+}
+
+.review-rating label:before {
+  content: '\f006';
+  font-family: 'FA Font';
+  font-weight: 900;
+  color: #ccc;
+}
+
+.review-rating label {
+  font-size: 14px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.review-rating label:hover,
+.review-rating input:checked ~ label {
+  color: #ffdc0a;
+}
+
+.review-rating input:checked + label:before {
+  content: '\f005';
+  font-family: 'FA Font';
+  font-weight: 900;
+  color: #ffdc0a;
+}
+
+.input_box{
+  background: #00000055;
+  height: fit-content;
+  width: 85vw;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 30px;
+  border-radius: 30px;
+  border-style: groove;
+  border-width:2px;
+}
+
+.username {
+  color:rgba(255, 255, 255, 0.683);
+  background-color: rgba(0, 0, 0, 0.287);
+  border-radius: 20px;
+  height: 5vh;
+  font-size: 16px;
+  width: 20vw;
+  text-align: center;
+  margin-left: -57%;
+  margin-bottom: 2%;
+  border-style: groove;
+}
+
+.submit_button{
+  position: relative;
+  left: 50%;
+  background-color:rgba(0, 0, 0, 0.417);
+  color: rgba(240, 248, 255, 0.683);
+  border-radius: 30px;
+  font-size: 20px;
+  padding: 10px;
+  border-style: groove;
+}
+
+.submit_button:hover{
+  background-color:rgba(247, 247, 247, 0.466);
+  color: rgba(0, 0, 0, 0.865);
 }

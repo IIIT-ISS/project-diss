@@ -91,7 +91,7 @@ function changeQuote() {
 }
 
 function startAnimation() {
-  intervalId = setInterval(changeQuote, 5000);
+  intervalId = setInterval(changeQuote, 3000);
 }
 
 function stopAnimation() {
@@ -104,3 +104,66 @@ startAnimation();
 const box = document.querySelector(".quote_list");
 box.addEventListener("mouseover", stopAnimation);
 box.addEventListener("mouseout", startAnimation);
+
+
+// Get the form and the reviews container
+const form = document.querySelector('form');
+const reviewsContainer = document.querySelector('#reviews-container');
+
+// Add a listener for form submission
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+
+  // Get the values entered by the user
+  const reviewHeading = document.querySelector('#review-heading').value;
+  const reviewBody = document.querySelector('#review-body').value;
+  const reviewDate = document.querySelector('#review-date').value;
+  const reviewUsername = document.querySelector('#review-username').value;
+  const reviewAlbum = document.querySelector('#review-album').value;
+  const reviewRating = document.querySelector('#review-rating').value;
+
+  // Create a new div element for the review
+  const newReview = document.createElement('div');
+  newReview.className = 'review';
+
+  // Create the review heading element
+  const reviewHeadingEl = document.createElement('h2');
+  reviewHeadingEl.className = 'review-heading';
+  reviewHeadingEl.textContent = reviewHeading;
+
+  // Create the review body element
+  const reviewBodyEl = document.createElement('p');
+  reviewBodyEl.className = 'review-body';
+  reviewBodyEl.textContent = reviewBody;
+
+  // Create the review date element
+  const reviewDateEl = document.createElement('p');
+  reviewDateEl.className = 'review-date';
+  reviewDateEl.textContent = reviewDate;
+
+  // Create the review username element
+  const reviewUsernameEl = document.createElement('p');
+  reviewUsernameEl.className = 'review-username';
+  reviewUsernameEl.textContent = reviewUsername;
+
+  // Create the review album element
+  const reviewAlbumEl = document.createElement('p');
+  reviewAlbumEl.className = 'review-album';
+  reviewAlbumEl.textContent = reviewAlbum;
+
+  // Create the review rating element
+  const reviewRatingEl = document.createElement('p');
+  reviewRatingEl.className = 'review-rating';
+  reviewRatingEl.textContent = reviewRating;
+
+  // Append the elements to the new review element
+  newReview.appendChild(reviewHeadingEl);
+  newReview.appendChild(reviewBodyEl);
+  newReview.appendChild(reviewDateEl);
+  newReview.appendChild(reviewUsernameEl);
+  newReview.appendChild(reviewAlbumEl);
+  newReview.appendChild(reviewRatingEl);
+
+  // Append the new review element to the reviews container
+  reviewsContainer.appendChild(newReview);
+});
