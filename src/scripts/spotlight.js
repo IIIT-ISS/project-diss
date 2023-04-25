@@ -2,7 +2,7 @@
 
 
 // Set the date we're counting down to
-var countDownDate = new Date("June 1, 2023 00:00:00").getTime();
+var countDownDate = new Date("June 30, 2023 00:00:00").getTime();
 
 // Update the countdown every second
 var x = setInterval(function() {
@@ -34,7 +34,11 @@ var x = setInterval(function() {
 // animation
 
 const quotes = [  
-
+{    
+  text1: "1. Once upon a time ago there was a poet named \"Lorem Ipsum\" whose job was to complete half-written poems by poets who had passed-away There used to live a mighty king named Von whose famous court poet \"Lil Nerdo Da Vucchi\" was assinated in the hood by the Romanians.  ",    
+  img: "../images/spotlight/1.jpg",  
+  text2: "2. The King took the revenge the opps got handled, but he still felt dissatisfied. He was eagerly waiting for the most recent work of Nerdo to get released now the work is left stagnated. The king tried putting a bounty of one pound. But unfortunately noone dared to show up, but one person. ",    
+},
 {    
   text1: " 3. Hearing this, our saviour \"Lorem Ipsum\"  travelled from CCNSB to Italy work on this. But Ipsum was ashtonished to see how much work was left for him to do in such a small span of time (he had to study for his  upcoming midsems too). But he didn't step back. ", 
   img: "../images/spotlight/2.jpg", 
@@ -50,11 +54,6 @@ const quotes = [
   img: "../images/spotlight/4.jpg",  
   text2: "8. Everyone loved PepeLisa so much,  that he was now unstoppable. He raised to fame so quickly and took over the world to such an extent, that the generations to come  Through didn't even know his presence. So they eventually forgot about his existence. ",    
 },
-{    
-  text1: "1. Once upon a time ago there was a poet named \"Lorem Ipsum\" whose job was to complete half-written poems by poets who had passed-away There used to live a mighty king named Von whose famous court poet \"Lil Nerdo Da Vucchi\" was assinated in the hood by the Romanians.  ",    
-  img: "../images/spotlight/1.jpg",  
-  text2: "2. The King took the revenge the opps got handled, but he still felt dissatisfied. He was eagerly waiting for the most recent work of Nerdo to get released now the work is left stagnated. The king tried putting a bounty of one pound. But unfortunately noone dared to show up, but one person. ",    
-}  
 ];
 
 
@@ -91,7 +90,7 @@ function changeQuote() {
 }
 
 function startAnimation() {
-  intervalId = setInterval(changeQuote, 5000);
+  intervalId = setInterval(changeQuote, 8000);
 }
 
 function stopAnimation() {
