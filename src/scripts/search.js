@@ -147,7 +147,11 @@ function display_records() {
   }
 
   if (songs_list.innerHTML == "") {
-    songs_list.innerHTML = "<p class=\"song-entry\" style=\"padding-left: 35%\">Couldn't find any matching songs!</p>";
+    songs_list.innerHTML = `
+      <p class="song-entry" style="padding-left: 35%">
+        Couldn't find any matching songs!
+      </p>
+    `;
   }
 }
 

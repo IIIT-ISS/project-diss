@@ -89,6 +89,8 @@
   padding-left: 10%;
   padding-right: 10%;
   background-image: url("../../images/banner_4.jpg");
+  align-items: center;
+  justify-content: center;
 }
 
 .album {

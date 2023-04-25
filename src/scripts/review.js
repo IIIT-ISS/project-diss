@@ -20,7 +20,7 @@ var reviews = [
         `,
         "username": "emo_queen_rasta",
         "rating": "4",
-        "date": "2022-04-21",
+        "date": "2023-04-21",
     },
     {
         "heading": "The collapse of the trumpoline feels line an end of an era honestly.",
@@ -38,7 +38,7 @@ var reviews = [
         `,
         "username": "i_like_piethon",
         "rating": "5",
-        "date": "2022-04-23",
+        "date": "2023-04-23",
     },
     {
         "heading": "Winter night, it's the 6th October If I had a one wish for my birthday, it would be some more ten-ten yola.",
@@ -55,7 +55,7 @@ var reviews = [
         `,
         "username": "Su_Mar(turn)_SuFa",
         "rating": "3",
-        "date": "2022-04-24",
+        "date": "2023-04-24",
     },
     {
         "heading": "Dead album blud!",
@@ -73,7 +73,7 @@ var reviews = [
         `,
         "username": "noob_master_69",
         "rating": "1",
-        "date": "2022-04-24",
+        "date": "2023-04-24",
     },
 ]
 
@@ -122,20 +122,25 @@ form.addEventListener("submit", (event) => {
 function update_reviews() {
     reviews_page.innerHTML = "";
     for (const row of reviews) {
+        const id = parseInt(row.album) + 1;
         reviews_page.innerHTML += `
         <li style="margin-left: 6%">
             <div class="box faq-box past_box">
                 <p><b class="past_review_heading">${row.heading}</b></p>
                 <p class="answers rating_box">
                     <b>Album: </b>
-                    <a href="artists/5/album (${parseInt(row.album) + 1}).html" id="past_review_album_name">
+                    <a href="artists/5/album (${id}).html" id="past_review_album_name">
                         ${albums[row.album]}
                     </a>
                     <span class="past_rating">${row.rating}</span>
                 </p>
                 <p class="answers" id="past_review">${row.review}</p>
                 <p class="answers">
-                    <b>Date:</b><span class="tab">${row.date}</span> <span class="tab">|</span> <span class="tab">By User: &nbsp;</span> <span id="past_username">${row.username}</span>
+                    <b>Date:</b>
+                    <span class="tab">${row.date}</span>
+                    <span class="tab">|</span> 
+                    <span class="tab"><b>By User: &nbsp;</b></span>
+                    <span id="past_username">${row.username}</span>
                 </p>
             </div>
         </li>
