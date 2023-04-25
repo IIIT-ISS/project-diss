@@ -332,6 +332,7 @@ hr {
   font-size: 18px;
   padding: 6px;
   border-style: groove;
+  margin-left: 10px;
 }
 
 .submit_button:hover {

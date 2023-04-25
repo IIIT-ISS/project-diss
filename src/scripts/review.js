@@ -78,34 +78,42 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const field_names = ["heading", "album", "review", "username"];
-    let dict = {};
-    for (const f of field_names) {
-        let val = document.forms["review-form"].elements[f].value;
-        if (val == "") {
-            alert(`Review field '${f}' must not be empty!`);
+    const form_elems = document.forms["review-form"].elements;
+    if (event.submitter.id != "clear-button") {
+        let dict = {};
+        for (const f of field_names) {
+            let val = form_elems[f].value;
+            if (val == "") {
+                alert(`Review field '${f}' must not be empty!`);
+                return;
+            }
+            dict[f] = val;
+        }
+
+        dict.rating = 0;
+        for (let i = 1; i <= 5; i++) {
+            if (form_elems[`star${i}`].checked) {
+                dict.rating = i;
+                break;
+            }
+        }
+        if (dict.rating == 0) {
+            alert(`The rating must be one of the 5 possible stars!`);
             return;
         }
-        dict[f] = val;
 
-        /* reset to empty */
-        val = document.forms["review-form"].elements[f].value = "";
+        dict.date = new Date().toJSON().slice(0, 10);
+        reviews.push(dict);
+        update_reviews();
     }
 
-    dict.rating = 0;
+    /* reset all fields to empty */
+    for (const f of field_names) {
+        form_elems[f].value = "";
+    }
     for (let i = 1; i <= 5; i++) {
-        if (document.forms["review-form"].elements[`star${i}`].checked) {
-            dict.rating = i;
-            document.forms["review-form"].elements[`star${i}`].checked = false;
-            break;
-        }
+        form_elems[`star${i}`].checked = false;
     }
-    if (dict.rating == 0) {
-        alert(`The rating must be one of the 5 possible stars!`);
-        return;
-    }
-    dict.date = new Date().toJSON().slice(0, 10);
-    reviews.push(dict);
-    update_reviews();
 });
 
 function update_reviews() {
