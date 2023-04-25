@@ -36,24 +36,24 @@ var x = setInterval(function() {
 const quotes = [  
 
 {    
-  text1: " 3. Hearing this, our saviour \"Lorem Ipsum\"\n\n travelled from CCNSB to Italy work on this.\n\nBut Ipsum was ashtonished to see how much\n\nwork was left for him to do in such a small\n\nspan of time (he had to study for his \n\nupcoming midsems too). But he didn't step\n\nback. He brushed his shoulders and immediately\n\nforked the incomplete project, to get done with.\n\n", 
+  text1: " 3. Hearing this, our saviour \"Lorem Ipsum\"  travelled from CCNSB to Italy work on this. But Ipsum was ashtonished to see how much work was left for him to do in such a small span of time (he had to study for his  upcoming midsems too). But he didn't step back. ", 
   img: "../images/spotlight/2.jpg", 
-  text2: "4. He sat for exactly one and half\n\nday working on it, and had to go through\n\nmultiple obstacles including loud shitty\n\nmetal music for 2 days straight.\n\nHe finally gave up and took the Plan B.\n\nHe went on a quest to find the forbidden \n\n\"packs and potions\" fron liverpool. \n\n",    
+  text2: "4. He sat for exactly one and half day working on it, and had to go through multiple obstacles including loud shitty metal music for 2 days straight. He finally gave up and took the Plan B. He went on a quest to find the forbidden  \"packs and potions\" fron liverpool.  ",    
 },  
 {    
-  text1: "5. Two days later, Ipsum\n\ncame out crawling off his dad's toolshed, \n\nDefeated... Not from not being able to\n\nmake something, but because the beast he \n\nmade overdosed and killed him.\n\nBefore his last breath, he named the\n\ninvention \"Chaat Gupta\" from Gupta dAInasty.\n\n",    
+  text1: "5. Two days later, Ipsum came out crawling off his dad's toolshed,  Defeated... Not from not being able to make something, but because the beast he  made overdosed and killed him. Before his last breath, he named the invention \"Chaat Gupta\" from Gupta dAInasty. ",    
   img: "../images/spotlight/3.jpg", 
-  text2: "6. Everyone was frightened by\n\nIpsum's death and feared Chaat from \n\ntaking over their livelyhood. Scientists\n\nall over the world worked on this to come\n\nwith a solution to make Chaat generate\n\nsomething which takes infinite time to\n\ngenerate. Today we know this invention as\n\nPePe Lisa, poet, singer, rapper, songwriter.\n\n",    
+  text2: "6. Everyone was frightened by Ipsum's death and feared Chaat from  taking over their livelyhood. Scientists all over the world worked on this to come with a solution to make Chaat generate something which takes infinite time to generate. Today we know this invention as PePe Lisa, poet, singer, rapper, songwriter. ",    
 },  
 {    
-  text1: "7. People all over the world\n\nthought pepe lisa was always a\n\nworking project and memed on Chaat\n\nfor working indefinitely on it.\n\nBut once Chaat released the Beta channel, \n\nthe critiques were silenced.\n\nPepe Lisa was not AI but a frog. \n\nwhich gained it some street rep. \n\n",    
+  text1: "7. People all over the world thought pepe lisa was always a working project and memed on Chaat for working indefinitely on it. But once Chaat released the Beta channel,  the critiques were silenced. Pepe Lisa was not AI but a frog.  which gained it some street rep.  ",    
   img: "../images/spotlight/4.jpg",  
-  text2: "8. Everyone loved PepeLisa so much, \n\nthat he was now unstoppable.\n\nHe raised to fame so quickly and\n\ntook over the world to such an\n\nextent, that the generations to come \n\nThrough didn't even know his presence.\n\nSo they eventually forgot about his existence.\n\n",    
+  text2: "8. Everyone loved PepeLisa so much,  that he was now unstoppable. He raised to fame so quickly and took over the world to such an extent, that the generations to come  Through didn't even know his presence. So they eventually forgot about his existence. ",    
 },
 {    
-  text1: "1. Once upon a time ago\n\nthere was a poet named \"Lorem Ipsum\"\n\nwhose job was to complete half-written poems\n\nby poets who had passed-away\n\nThere used to live a mighty king named Von\n\nwhose famous court poet \"Lil Nerdo Da Vucchi\"\n\nwas assinated in the hood by the Romanians. \n\n",    
+  text1: "1. Once upon a time ago there was a poet named \"Lorem Ipsum\" whose job was to complete half-written poems by poets who had passed-away There used to live a mighty king named Von whose famous court poet \"Lil Nerdo Da Vucchi\" was assinated in the hood by the Romanians.  ",    
   img: "../images/spotlight/1.jpg",  
-  text2: "2. The King took the revenge\n\nthe opps got handled, but he still\n\nfelt dissatisfied. He was eagerly waiting for\n\nthe most recent work of Nerdo to get released\n\nnow the work is left stagnated. The king tried\n\nputting a bounty of one pound. But unfortunately\n\nnoone dared to show up, but one person.\n\n",    
+  text2: "2. The King took the revenge the opps got handled, but he still felt dissatisfied. He was eagerly waiting for the most recent work of Nerdo to get released now the work is left stagnated. The king tried putting a bounty of one pound. But unfortunately noone dared to show up, but one person. ",    
 }  
 ];
 
