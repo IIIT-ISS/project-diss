@@ -84,14 +84,14 @@ function changeQuote() {
     quote1Text.classList.remove("hidden");
     quoteImg.classList.remove("hidden");
     quote2Text.classList.remove("hidden");
-  }, 500);
+  }, 1000);
 
   // increment the quote index, and wrap around if needed
   currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
 }
 
 function startAnimation() {
-  intervalId = setInterval(changeQuote, 3000);
+  intervalId = setInterval(changeQuote, 5000);
 }
 
 function stopAnimation() {

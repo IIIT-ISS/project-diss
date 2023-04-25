@@ -112,7 +112,7 @@ function update_reviews() {
     reviews_page.innerHTML = "";
     for (const row of reviews) {
         reviews_page.innerHTML += `
-        <li style="margin-left:90px; margin-right:90px;">
+        <li style="margin-left: 6%">
             <div class="box faq-box past_box">
                 <p><b class="past_review_heading">${row.heading}</b></p>
                 <p class="answers rating_box">
