@@ -147,7 +147,7 @@ function update_reviews() {
 function update_dropdown() {
     const dropdown = document.getElementById('album');
     for (let i = 0; i < albums.length; i++) {
-        dropdown.innerHTML += `<option value="${i}">${albums[i]}</option>`;
+        dropdown.innerHTML += `<option class="option" value="${i}">${albums[i]}</option>`;
     }
 }
 
