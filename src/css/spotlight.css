@@ -208,6 +208,11 @@ hr {
 
 #past_review_album_name {
   margin-left: 1%;
+  color: rgba(63, 38, 0, 0.934);
+}
+
+#past_review_album_name:hover {
+  color: rgba(147, 92, 10, 0.934);
 }
 
 /* review input panel */

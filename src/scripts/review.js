@@ -1,10 +1,13 @@
 const form = document.getElementById('review-form');
 const reviews_page = document.getElementById('past-reviews');
 
+/* This has to be ordered by "id" */
+const albums = ["/g/othic", "Trumpoline", "AIM Mona Lisa", "Netscape Nightwatch", "Synthetica"];
+
 var reviews = [
     {
         "heading": "One of the most emotional endings for the album, I couldn't hold myself at the end",
-        "album": "Synthetica",
+        "album": "4",
         "review": `
             Despite being crafted by a machine, this album is surprisingly human in its expression of emotion.
             The lyrics are introspective and raw, delving into themes of love, loss, and self-discovery.
@@ -21,7 +24,7 @@ var reviews = [
     },
     {
         "heading": "The collapse of the trumpoline feels line an end of an era honestly.",
-        "album": "Trumpoline",
+        "album": "1",
         "review": `
             This is a very powerful album and explores the collapse of the well known government of Frump by
             a mob of soydevs and soyjacks using iToddler devices and javascript using an organized jihad, with 
@@ -39,7 +42,7 @@ var reviews = [
     },
     {
         "heading": "Winter night, it's the 6th October If I had a one wish for my birthday, it would be some more ten-ten yola.",
-        "album": "Netscape Nightwatch",
+        "album": "3",
         "review": `
             We started off bringin' waps to the label meetings. Freestyle in the Snoochie show, 
             with a trey-eight tucked in my tracksuit Way back then it was Ellesse Only God knows why I'm here
@@ -56,7 +59,7 @@ var reviews = [
     },
     {
         "heading": "Dead album blud!",
-        "album": "/g/othic",
+        "album": "0",
         "review": `
             I know im listening to this album 6 years late, but im listening to it exactly on the release date itself.
             What the f was that man, not cool, not cool.
@@ -124,7 +127,10 @@ function update_reviews() {
             <div class="box faq-box past_box">
                 <p><b class="past_review_heading">${row.heading}</b></p>
                 <p class="answers rating_box">
-                    <b>Album: </b><u id="past_review_album_name">${row.album}</u>
+                    <b>Album: </b>
+                    <a href="artists/5/album (${parseInt(row.album) + 1}).html" id="past_review_album_name">
+                        ${albums[row.album]}
+                    </a>
                     <span class="past_rating">${row.rating}</span>
                 </p>
                 <p class="answers" id="past_review">${row.review}</p>
@@ -138,4 +144,12 @@ function update_reviews() {
 
 }
 
+function update_dropdown() {
+    const dropdown = document.getElementById('album');
+    for (let i = 0; i < albums.length; i++) {
+        dropdown.innerHTML += `<option value="${i}">${albums[i]}</option>`;
+    }
+}
+
+update_dropdown();
 update_reviews();
