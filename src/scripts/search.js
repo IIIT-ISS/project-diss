@@ -25,13 +25,13 @@ form.addEventListener("submit", (event) => {
   get_songs(x);
 });
 
-explicitness.addEventListener('change', explicitness_callback);
+explicitness.addEventListener("change", explicitness_callback);
 function explicitness_callback() {
   explicit_filter = explicitness.checked;
   display_records();
 }
 
-duration.addEventListener('change', duration_callback);
+duration.addEventListener("change", duration_callback);
 function duration_callback() {
   duration_m.disabled = duration_s.disabled = !duration.checked;
   duration_m.value = duration_s.value = "";
@@ -39,8 +39,8 @@ function duration_callback() {
   display_records();
 }
 
-duration_m.addEventListener('change', duration_update);
-duration_s.addEventListener('change', duration_update);
+duration_m.addEventListener("change", duration_update);
+duration_s.addEventListener("change", duration_update);
 function duration_update() {
   duration_time = 0;
   if (duration_m.value != "") {
@@ -52,15 +52,14 @@ function duration_update() {
 
   if (duration_time < 0) {
     duration_callback();
-  }
-  else {
+  } else {
     duration_m.value = Math.floor(duration_time / 60);
     duration_s.value = duration_time % 60;
     display_records();
   }
 }
 
-clear_filters.addEventListener('click', clear_filters_callback);
+clear_filters.addEventListener("click", clear_filters_callback);
 function clear_filters_callback() {
   duration.checked = explicitness.checked = false;
   duration_callback();
@@ -69,7 +68,8 @@ function clear_filters_callback() {
 }
 
 function get_songs(term) {
-  const url = "https://itunes.apple.com/search?" +
+  const url =
+    "https://itunes.apple.com/search?" +
     new URLSearchParams({
       term: term,
       entity: "song",
@@ -100,7 +100,10 @@ function display_records() {
   let new_indices = "";
   for (let i = 0; i < records.length; i++) {
     /* Duration filter */
-    if (duration_time > 0 && records[i].trackTimeMillis > (duration_time * 1000)) {
+    if (
+      duration_time > 0 &&
+      records[i].trackTimeMillis > duration_time * 1000
+    ) {
       continue;
     }
 
@@ -128,7 +131,7 @@ function display_records() {
 
     let explicit_str = "";
     if (row.trackExplicitness == "explicit") {
-      explicit_str = "<p class=\"song-explicit\">[EXPLICIT]</p>";
+      explicit_str = '<p class="song-explicit">[EXPLICIT]</p>';
     }
 
     songs_list.innerHTML += `
@@ -141,7 +144,9 @@ function display_records() {
           </a>
           ${explicit_str}
           <p class="author">
-            by <a class="itunes-link" href="${row.artistViewUrl}">${row.artistName}</a>
+            by <a class="itunes-link" href="${row.artistViewUrl}">${
+      row.artistName
+    }</a>
           </p>
         </div>
         <div class="album-name">${row.collectionName}</div>
