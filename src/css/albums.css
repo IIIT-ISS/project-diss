@@ -162,6 +162,7 @@ figcaption {
   scroll-behavior: smooth;
   scrollbar-color: rgba(196, 195, 195, 0.5) rgba(216, 216, 216, 0.1);
   color: white;
+  overflow-y: hidden;
 }
 
 .top-songs-grid img {

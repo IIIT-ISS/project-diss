@@ -23,8 +23,6 @@ form.addEventListener("submit", (event) => {
     return false;
   }
   get_songs(x);
-  search_once = true;
-  display_records();
 });
 
 explicitness.addEventListener('change', explicitness_callback);
@@ -78,11 +76,18 @@ function get_songs(term) {
       limit: 10,
     });
 
+  songs_list.innerHTML = `
+    <p class="song-entry song-entry-2">
+      Loading...
+    </p>
+  `;
+
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
       records = data.results;
       record_indices = "";
+      search_once = true;
       display_records();
     });
 }
@@ -148,7 +153,7 @@ function display_records() {
 
   if (songs_list.innerHTML == "") {
     songs_list.innerHTML = `
-      <p class="song-entry" style="padding-left: 35%">
+      <p class="song-entry song-entry-2">
         Couldn't find any matching songs!
       </p>
     `;
