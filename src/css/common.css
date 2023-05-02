@@ -85,7 +85,7 @@ body {
 }
 
 .minus-btn::before {
-  content: '\f1f8';
+  content: '\f1f8'; /* 2b for add*/
   font-family: 'FA Font';
   color: white;
   padding: 10%;
