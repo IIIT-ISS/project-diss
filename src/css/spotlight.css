@@ -5,7 +5,7 @@
 .quote_box {
   height: fit-content;
   border-radius: 30px;
-  background-image: url("../../images/banner_3.jpg");
+  background-image: url("/images/banner_3.jpg");
   background-size: contain;
   margin: auto;
 }
@@ -177,8 +177,6 @@ hr {
 }
 
 .past_box {
-  font-family: "Song Font";
-  color: rgba(63, 38, 0, 0.934);
   height: 60px;
   width: 79vw;
   scrollbar-width: none;

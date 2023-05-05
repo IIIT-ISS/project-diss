@@ -8,7 +8,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   text-align: center;
-  background-image: url("../../images/background.jpeg");
+  background-image: url("/images/background.jpeg");
   font-size: 20px;
 }
 
@@ -54,6 +54,8 @@ body {
   padding-top: 0;
   padding-bottom: 10;
   width: fit-content;
+  font-family: 'Song Font'; 
+  color: rgba(63, 38, 0, 0.934);
 }
 
 .faq-box:hover {

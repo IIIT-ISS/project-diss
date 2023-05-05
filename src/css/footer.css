@@ -1,7 +1,7 @@
 @import url("./fonts.css");
 
 .footer {
-  background-image: url("../../images/banner_2.jpeg");
+  background-image: url("/images/banner_2.jpeg");
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   width: 100%;

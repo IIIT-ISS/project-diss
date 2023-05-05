@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Album Songs{% endblock %}
+
+{% block extra_stylesheets %}
+<link rel="stylesheet" href="/css/album-songs.css" />
+{% endblock %}
+
+{% block content %}
+<div class="album-outer">
+    <div class="album-cover">
+        <img src="/images/artist/{{ artist_id }}/albums/{{ album_id }}" />
+        <p>
+            {% for line in description %}
+                {% if loop.index0 != 0 %}<br />{% endif %}
+                {{ line }}
+            {% endfor %}
+        </p>
+    </div>
+    <ol class="album-songs">
+        {% for id, song in songs.items() %}
+        <li>
+            <div class="song">
+                <p>{{ song.name }}</p>
+                <p>{{ song.time }}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ol>
+</div>
+{% endblock %}
