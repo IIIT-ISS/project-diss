@@ -64,20 +64,24 @@ const quotes = [
 let currentQuoteIndex = 0;
 let intervalId;
 
-function changeQuote() {
-  // get the quote text and image elements
-  const quote1Text = document.querySelector(".quote1");
-  const quoteImg = document.querySelector(".photo");
-  const quote2Text = document.querySelector(".quote2");
+ // get the quote text and image elements
+ const quote1Text = document.querySelector(".quote1");
+ const quoteImg = document.querySelector(".photo");
+ const quote2Text = document.querySelector(".quote2");
 
+function setQuote(ind) {
+  // update the quote text and image
+  quote1Text.innerText = quotes[ind].text1;
+  quoteImg.src = quotes[ind].img;
+  quote2Text.innerText = quotes[ind].text2;
+}
+
+function changeQuote() {
   quote1Text.classList.add("hidden");
   quoteImg.classList.add("hidden");
   quote2Text.classList.add("hidden");
 
-  // update the quote text and image
-  quote1Text.innerText = quotes[currentQuoteIndex].text1;
-  quoteImg.src = quotes[currentQuoteIndex].img;
-  quote2Text.innerText = quotes[currentQuoteIndex].text2;
+  setQuote(currentQuoteIndex);
 
   setTimeout(() => {
     quote1Text.innerText = quotes[currentQuoteIndex].text1;
@@ -99,7 +103,8 @@ function startAnimation() {
 function stopAnimation() {
   clearInterval(intervalId);
 }
-
+// first init quote
+setQuote(0);
 startAnimation();
 
 // stop the animation on hover

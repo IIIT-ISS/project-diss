@@ -468,6 +468,12 @@
   margin: 0;
 }
 
+.wood-stuff h1 {
+  font-size: 40px;
+  color: rgba(218, 214, 214, 0.89);
+  margin-left: 10%;
+  font-family: 'Heading Font';
+}
 /* captions test */
 
 figure {
