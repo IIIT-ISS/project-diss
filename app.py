@@ -272,5 +272,58 @@ def handle_albums_songs(artist_id: int, album_id: int):
     )
 
 
+@app.route("/playlist_api/<api_type>")
+def playlist_api_minimal(api_type: str):
+    if api_type == "minimal":
+        is_minimal = True
+    elif api_type == "full":
+        is_minimal = False
+    else:
+        abort(404)
+
+    con = sqlite3.connect(DB_FILE)
+    try:
+        cur = con.cursor()
+        cur.execute("SELECT * FROM playlist")
+        playlist_songs = [int(i[0]) for i in cur.fetchall()]
+
+        song_id = request.args.get("id", type=int)
+        action = request.args.get("action")
+        if action == "add" and song_id and song_id not in playlist_songs:
+            cur.execute(f"INSERT INTO playlist VALUES ({song_id})")
+            playlist_songs.append(song_id)
+            con.commit()
+
+        if action == "del" and song_id in playlist_songs:
+            cur.execute(f"DELETE FROM playlist WHERE song_id = {song_id}")
+            playlist_songs.remove(song_id)
+            con.commit()
+
+        if is_minimal:
+            return playlist_songs
+
+        ret = []
+        for song_id in playlist_songs:
+            artist_id, album_id = get_artist_album_from_song(song_id, cur)
+            artist = artists[artist_id]
+            album = artist["albums"][album_id]
+            song = album["songs"][song_id]
+            ret.append(
+                {
+                    "artist_id": artist_id,
+                    "album_id": album_id,
+                    "song_id": song_id,
+                    "song_name": song["name"],
+                    "song_time": song["time"],
+                    "artist_name": artist["name"],
+                    "album_name": album["name"],
+                }
+            )
+        return ret
+
+    finally:
+        con.close()
+
+
 if __name__ == "__main__":
     app.run()
