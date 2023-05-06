@@ -22,9 +22,14 @@
             <div class="song">
                 <p>{{ song.name }}</p>
                 <p>{{ song.time }}</p>
+                <button id="{{ id }}"></button>
             </div>
         </li>
         {% endfor %}
     </ol>
 </div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/scripts/songs.js"></script>
 {% endblock %}

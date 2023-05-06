@@ -64,3 +64,38 @@
 .song p {
   margin: 0;
 }
+
+.playlist-on,
+.playlist-off {
+  border: none;
+  font-size: 1rem;
+  background-color: transparent;
+  border-radius: 50%;
+  height: 26px;
+  width: 26px;
+}
+
+.playlist-off:before {
+  content: '\f004';
+  font-family: 'FA Font';
+  color: rgb(200, 200, 200);
+  font-size: 18px;
+}
+
+.playlist-off:hover:before {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+}
+
+.playlist-on:before {
+  content: '\e4fd';
+  font-family: 'FA Font';
+  color: #ff0000da;
+  font-size: 18px;
+}
+
+.playlist-on:hover:before {
+  color: #ff0000;
+  font-size: 22px;
+}
+
