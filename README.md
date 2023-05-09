@@ -17,8 +17,6 @@ This is the documentation for the project 'Meanius' - a music review website.
 
 ## General Usage
 
-As of right now there is only support for local viewing of webpages.
-
 Follow the instructions below to get all the webpages up and running:
 
 - Clone the repository for the webpage.
@@ -30,14 +28,17 @@ Follow the instructions below to get all the webpages up and running:
 
 Instructions to navigate through the website:
 
-- Open `src/index.html` in your browser which should take you to the home page.
+- Launch the website server by running `app.py` with python. Connect to the address that the server binds to.
 - From here use the navigation bar to navigate through the webpages.
 - Once you are in the list of Artists page, you can click on an artists taking you to the artist-albums page.
 - This page consists of a brief description of the artist and the list of albums and his/her/their/its top songs.
 - Clicking on any of these albums in this page should take you to the album-songs page.
 - This page consists of a brief description of the album and the list of all songs in the album.
 - Each song in the list consists of details like name, song-length.
-- There are other accessible websites like the about page and the faq page.
+- There are other informative pages like the about page and the faq page.
+- The search page allows you to search, filter and preview songs from iTunes.
+- The spotlights page features a top artist, and also has a reviews submenu.
+- The playlist page keeps track of all songs added by the user. 
 - There is also a contribute page which takes you to our github.
 - The footer in each of these pages also has the list of all webpages needed. which you can use for easy navigation.
 - The footer also consists of credits which is a list of all resources used to make this website
@@ -46,58 +47,47 @@ Instructions to navigate through the website:
 
 ```
 .
+├── app.py
 ├── ASSUMPTIONS.md
-├── README.md
-├── favicon.ico
 ├── features
-│   ├── artist-list.html
-│   ├── home-test.html
-│   └── sample-artist.html
+│   ├── artist-list.html
+│   ├── home-test.html
+│   └── sample-artist.html
 ├── fonts
-│   ├── (list)
-│   ├── (of)
-│   ├── (fonts)
+│   └── [multiple font files here]
 ├── images
-│   ├── Songs
-│   │   ├── (Top 3 Songs)
-│   │   └── (Artist names)
-│   │       ├── (Top 3)
-│   │       ├── (for each)
-│   │       └── (artist)
-|   ├── album_covers
-│   │   └── (Artist names)
-│   │       └── (Their albums)
-│   ├── artist
-│   │   ├── (profile pictures of all)
-│   │   ├── (artists and)
-│   │   ├── (and their)
-│   │   └── (picture for banner)
-│   ├── (other images of general backgrounds)
-│   ├── (banners, textures)
-│   └── (and logos used around the website)
+│   ├── artist
+│   │   └── [artist id and name]
+│   │       ├── albums
+│   │       │   └── [image of an album with name and id]
+│   │       ├── songs
+│   │       │   └── [image of a song with name and id]
+│   │       ├── [cover image]
+│   │       └── [pfp image]
+│   ├── spotlight
+│   │   └── [extra images of spotlight artist here]
+│   └── [images of general backgrounds, banners, textures nd logos used around the website]
+├── README.md
 ├── src
-│   ├── about.html
-│   ├── artists
-│   │   ├── Y (Y - artist index)
-│   │   |   ├── album-X.html (X - album index)
-│   │   │   └── index.html
-│   │   └── index.html
-│   ├── css
-│   │   ├── albums.css
-│   │   ├── common.css
-│   │   ├── footer.css
-│   │   ├── home.css
-│   │   └── navbar.css
-│   ├── faq.html
-│   └── index.html
+│   ├── artists
+│   │   ├── album-songs.html
+│   │   ├── artist-albums.html
+│   │   └── index.html
+│   ├── css
+│   │   └── [all css files here]
+│   ├── scripts
+│   │   └── [all js files here]
+│   ├── about.html
+│   ├── base.html
+│   ├── faq.html
+│   ├── index.html
+│   ├── playlist.html
+│   ├── search.html
+│   └── spotlight.html
+├── storage
+│   └── [csv files to store static data used in the site]
 └── webpage_content
-    ├── About.txt
-    ├── Faq.txt
-    ├── album-description.txt
-    ├── artist-descriptions.txt
-    ├── cherry_picks.txt
-    └── credits.txt
-
+    └── [text files that list content which was later integrated into the site]
 ```
 
 ## Assumptions page
@@ -107,26 +97,25 @@ The assumptions page consists of all the assumptions that were made deviating or
 ## The `src` dir
 
 - Contains the source code for the entire project
-- At the root of this dir we have HTML pages for "Home", "About" and "FAQ"
+- At the root of this dir we have HTML pages for "Home", "About", "FAQ", "Playlist", "Search" and "Spotlight"
 
   #### Subdir `css`
 
   - All css code lives here, split into files by category
 
+  #### Subdir `scripts`
+
+  - All js code is here
+
   #### Subdir `artists`
 
-  - `index.html` is the "Artists" page.
-  - Each artist has a subdir within this, identified with a unique number
-  - Such a subdir has an `index.html` page which is the "Artist Albums" page, and many
-    other pages for "Album Songs" that are of the form `album (x).html`
+  - Here are 3 template files, one for "artists" page, one for "artist albums" and the last for "album songs"
 
 ### The `images` dir
 
 This consists of images for all the songs, albums and artists, and other backgrounds and logos used in the website:
 
-- The artist page consists of the profile picture (small) and the banner picture (large) for all the artists.
-- The albums page consists of many artists directories in each of it are all the album covers.
-- The Songs page against consists of many directories in each of it are the covers of top 3 songs.
+- Each artist has a folder within the `artist` folder. There are images for all albums, top songs, and also a cover page and a pfp page.
 - Other images include a few banners images we used, 3 home page images, 1 texture for headings
   background, a background for the whole webpage and finally the logos.
 
