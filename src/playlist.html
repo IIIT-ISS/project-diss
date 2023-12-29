@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% set active_page = "/playlist.html" %}
+{% block title %}Playlist{% endblock %}
+
+{% block extra_stylesheets %}
+<link rel="stylesheet" href="/css/playlist.css" />
+{% endblock %}
+
+{% block content %}
+<div id="playlist"></div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/scripts/playlist.js"></script>
+{% endblock %}

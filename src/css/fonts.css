@@ -1,49 +1,49 @@
 @font-face {
   font-family: "Quote Font";
-  src: url("../../fonts/Victor.ttf");
+  src: url("/fonts/Victor.ttf");
 }
 
 @font-face {
   font-family: "Time Font";
-  src: url("../../fonts/Mechanical.ttf");
+  src: url("/fonts/Mechanical.ttf");
 }
 
 @font-face {
   font-family: "Image Font";
-  src: url("../../fonts/PoiretOne-Regular.ttf");
+  src: url("/fonts/PoiretOne-Regular.ttf");
 }
 
 @font-face {
   font-family: "Heading Font";
-  src: url("../../fonts/Monoton-Regular.ttf");
+  src: url("/fonts/Monoton-Regular.ttf");
 }
 
 @font-face {
   font-family: "Temp Quote Font";
-  src: url("../../fonts/CabinSketch-Regular.ttf");
+  src: url("/fonts/CabinSketch-Regular.ttf");
 }
 
 @font-face {
   font-family: "Description Font";
-  src: url("../../fonts/Alkatra-VariableFont_wght.ttf");
+  src: url("/fonts/Alkatra-VariableFont_wght.ttf");
 }
 
 @font-face {
   font-family: "Navbar Font";
-  src: url("../../fonts/BebasNeue-Regular.ttf");
+  src: url("/fonts/BebasNeue-Regular.ttf");
 }
 
 @font-face {
   font-family: "Song Font";
-  src: url("../../fonts/Forum-Regular.ttf");
+  src: url("/fonts/Forum-Regular.ttf");
 }
 
 @font-face {
   font-family: "Footer Font";
-  src: url("../../fonts/DaddyTimeMono.ttf");
+  src: url("/fonts/DaddyTimeMono.ttf");
 }
 
 @font-face {
   font-family: "FA Font";
-  src: url("../../fonts/FA\ Font.otf");
+  src: url("/fonts/FA\ Font.otf");
 }

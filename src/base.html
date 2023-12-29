@@ -1,0 +1,86 @@
+{%
+set navigation_bar = [
+('/index.html', 'Home'),
+('/artists', 'Artists'),
+('/about.html', 'About'),
+('/faq.html', 'FAQ'),
+('/search.html', 'Search'),
+('/spotlight.html', 'Spotlight'),
+('/playlist.html', 'Playlist'),
+('https://github.com/CS6-201-ISS-S23/project-diss', 'Contribute')
+]
+-%}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/navbar.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  {% block extra_stylesheets %}{% endblock %}
+  <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+  <div class="meanius">
+    <img src="/images/logo.jpeg" alt="Meanius Logo" width="60" class="meanius-item" />
+    <p class="meanius-item" style="margin-top: 10px">
+      "We'll tell you what you need to hear,<br />not what you want to hear."
+    </p>
+    <p class="meanius-item"></p>
+    <img src="/images/banner_FEF665.png" alt="Meanius" width="250" class="meanius-item" />
+  </div>
+  <div class="navbar">
+    {% for href, caption in navigation_bar %}
+    <a href="{{ href }}" {% if href==active_page %}class="navbar-selected" {% endif %}>{{ caption }}</a>
+    {% endfor %}
+  </div>
+
+  {% block content %}{% endblock %}
+
+  <div class="footer">
+    <div class="footer-col">
+      <div style="align-self: center">
+        <img src="/images/logo_shadowed.png" height="150px" />
+      </div>
+      <div class="footer-box footer-box-big" style="margin-top: 0">
+        "We'll tell you what you need to hear, not what you want to hear."<br /><br />
+        - Sun Tzu, Art of War
+      </div>
+    </div>
+    <div class="footer-line"></div>
+    <div class="footer-box footer-box-big footer-scroll-box">
+      <b><u>Credits</u></b><br /><br />
+      {% for name1, url1, name2, url2 in credits -%}
+      <div class="footer-box footer-box-small">
+        <a href="{{ url1 }}" target="_blank">{{ name1 }} <i class="link-icon"></i></a>
+        {% if name2 %}
+        /
+        <a href="{{ url2 }}" target="_blank">{{ name2 }} <i class="link-icon"></i></a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    <div class="footer-line"></div>
+    <div class="footer-col">
+      <div class="footer-box footer-box-big footer-col-3-grid">
+        {% for href, caption in navigation_bar %}
+        <div class="footer-box footer-box-small">
+          <a href="{{ href }}">{{ caption }}</a>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="footer-box footer-box-big" style="font-size: 15px">
+        <p style="margin: 5px">&copy; 2023 Team DISS</p>
+        <p style="font-size: 15px">IIIT, Gacchibowli, Hyderabad</p>
+        <a href="http://www.wtfpl.net/" target="_blank" rel="nofollow">License <i class="link-icon"></i></a>
+      </div>
+    </div>
+  </div>
+  {% block extra_js %}{% endblock %}
+</body>
+
+</html>

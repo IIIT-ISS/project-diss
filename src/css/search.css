@@ -3,7 +3,7 @@
 .search-box {
   width: 60%;
   margin: auto;
-  background: url("../../images/banner_4.jpg");
+  background: url("/images/banner_4.jpg");
   border-radius: 15px;
   font-family: "Quote Font";
 }
@@ -97,7 +97,7 @@ form#song-search button:hover {
 }
 
 #songs-list {
-  background: url("../../images/banner_3.jpg");
+  background: url("/images/banner_3.jpg");
   min-height: 50px;
   border-radius: 20px;
   color: rgb(200, 220, 220);

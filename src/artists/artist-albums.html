@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}Artist Albums{% endblock %}
+
+{% block extra_stylesheets %}
+<link rel="stylesheet" href="/css/albums.css" />
+{% endblock %}
+
+{% block content %}
+<div class="artist-box">
+    <img src="/images/artist/{{ artist_id }}/cover" alt="profile banner" />
+    <div class="artist-box-text artist-box-name">{{ name }}</div>
+    <div class="artist-box-text artist-box-desc">
+        {% for line in description %}
+            {% if loop.index0 != 0 %}<br />{% endif %}
+            {{ line }}
+        {% endfor %}
+    </div>
+    <div class="artist-img">
+        <img src="/images/artist/{{ artist_id }}/pfp" alt="Profile Picture" />
+    </div>
+</div>
+
+<h1>Albums</h1>
+<div class="albums-outer-grid">
+    {% for album_id, album in albums.items() %}
+    <div class="album{% if loop.index0 %} album-shadow{% endif %}">
+        <figure style="margin: 0">
+            <a href="/artists/{{ artist_id}}/albums/{{ album_id }}">
+                <img src="/images/artist/{{ artist_id }}/albums/{{ album_id }}" alt="album1" />
+            </a>
+            <figcaption class="album-caption">
+                <p>{{ album.name }}</p>
+                <p>{{ album.songs|length }} songs - {{ album.year }}</p>
+            </figcaption>
+        </figure>
+    </div>
+    {% endfor %}
+</div>
+
+{% if has_top -%}
+<h1>Top Songs</h1>
+<div class="top-songs-grid">
+    {% for album in albums.values() -%}
+        {% for song_id, song in album.songs.items() -%}
+            {% if song.has_img -%}
+            <figure>
+                <img src="/images/artist/{{ artist_id }}/songs/{{ song_id }}" />
+                <figcaption style="text-align: center">{{ song.name }}</figcaption>
+            </figure>
+            {% endif -%}
+        {% endfor -%}
+    {% endfor -%}
+</div>
+{% endif -%}
+
+{% endblock %}

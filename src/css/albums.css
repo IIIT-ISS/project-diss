@@ -88,7 +88,7 @@
   padding-bottom: 20px;
   padding-left: 10%;
   padding-right: 10%;
-  background-image: url("../../images/banner_4.jpg");
+  background-image: url("/images/banner_4.jpg");
   align-items: center;
   justify-content: center;
 }
@@ -157,7 +157,7 @@ figcaption {
   align-content: center;
   border-radius: 50px;
   display: grid;
-  background: url("../../images/banner_3.jpg");
+  background: url("/images/banner_3.jpg");
   white-space: nowrap;
   overflow-x: auto;
   scrollbar-width: thin;

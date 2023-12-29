@@ -8,7 +8,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   text-align: center;
-  background-image: url("../../images/background.jpeg");
+  background-image: url("/images/background.jpeg");
   font-size: 20px;
 }
 
@@ -39,6 +39,12 @@ body {
   box-shadow: 10px 5px 5px rgba(50, 50, 50, 0.4);
 }
 
+.box h3 {
+  margin-bottom: 0px;
+  margin-top: 10px; 
+  font-family: 'Heading Font';
+}
+
 .about1 {
   margin: 50px;
 }
@@ -54,6 +60,8 @@ body {
   padding-top: 0;
   padding-bottom: 10;
   width: fit-content;
+  font-family: 'Song Font'; 
+  color: rgba(63, 38, 0, 0.934);
 }
 
 .faq-box:hover {
@@ -68,3 +76,5 @@ body {
 .faq-box:hover .answers {
   opacity: 1;
 }
+
+

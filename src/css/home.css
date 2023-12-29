@@ -64,14 +64,14 @@
 .quote {
   margin: 0px;
   padding: 0px;
-  background-image: url(../../images/home1.jpg);
+  background-image: url(/images/home1.jpg);
   background-size: cover;
   width: 100vw;
   height: calc(100vh - 111px);
 }
 
 .quote2 {
-  background-image: url(../../images/home2.jpg);
+  background-image: url(/images/home2.jpg);
   margin: 0px;
   padding: 0px;
   background-size: cover;
@@ -80,7 +80,7 @@
 }
 
 .quote3 {
-  background-image: url(../../images/home3.jpg);
+  background-image: url(/images/home3.jpg);
   margin: 0px;
   padding: 0px;
   background-size: cover;
@@ -138,7 +138,7 @@
 }
 
 .stuff {
-  background-image: url(../../images/banner_4.jpg);
+  background-image: url(/images/banner_4.jpg);
   background-color: rgba(255, 255, 255, 0.7);
   margin: 1%;
   border-radius: 40px;
@@ -464,10 +464,16 @@
 }
 
 .wood-stuff {
-  background-image: url(../../images/banner_3.jpg);
+  background-image: url(/images/banner_3.jpg);
   margin: 0;
 }
 
+.wood-stuff h1 {
+  font-size: 40px;
+  color: rgba(218, 214, 214, 0.89);
+  margin-left: 10%;
+  font-family: 'Heading Font';
+}
 /* captions test */
 
 figure {
