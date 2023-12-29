@@ -89,6 +89,8 @@
   padding-left: 10%;
   padding-right: 10%;
   background-image: url("../../images/banner_4.jpg");
+  align-items: center;
+  justify-content: center;
 }
 
 .album {
@@ -114,41 +116,8 @@ h1 {
 
 .album:hover {
   height: 375px;
-}
-
-.album-1:hover {
-  flex-basis: 40%;
-}
-
-.album-2:hover {
-  flex-basis: 60%;
-}
-
-.album-3:hover {
-  flex-basis: 50%;
-}
-
-.album-4:hover {
-  flex-basis: 35%;
-}
-
-.album-5:hover {
-  flex-basis: 35%;
-}
-
-.album-6:hover {
-  flex-basis: 300px;
-}
-
-.album-7:hover {
-  flex-basis: 300px;
-}
-
-.album-8:hover {
-  flex-basis: 300px;
-}
-
-.album-9:hover {
+  flex-grow: 0;
+  flex-shrink: 0;
   flex-basis: 300px;
 }
 
@@ -195,6 +164,7 @@ figcaption {
   scroll-behavior: smooth;
   scrollbar-color: rgba(196, 195, 195, 0.5) rgba(216, 216, 216, 0.1);
   color: white;
+  overflow-y: hidden;
 }
 
 .top-songs-grid img {

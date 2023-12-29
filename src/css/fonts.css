@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: "Time Font";
+  src: url("../../fonts/Mechanical.ttf");
+}
+
+@font-face {
   font-family: "Image Font";
   src: url("../../fonts/PoiretOne-Regular.ttf");
 }
